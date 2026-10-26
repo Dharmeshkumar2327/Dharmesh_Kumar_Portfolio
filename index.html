@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharmesh Kumar | Senior Data & Reporting Analyst Portfolio</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="Portfolio of Dharmesh Kumar, Senior Data & Reporting Analyst with 4+ years experience in Power BI, Tableau, SQL (PostgreSQL), Python, and Machine Learning.">
+  <meta name="keywords" content="Dharmesh Kumar, Data Analyst, Senior Data Analyst, Power BI, SQL, Python, Tableau, Machine Learning, Bangalore, GitHub Portfolio">
+  <meta name="author" content="Dharmesh Kumar">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dharmesh Kumar | Senior Data Analyst Portfolio">
+  <meta property="og:description" content="Senior Data Analyst with 4+ years experience turning complex datasets into strategic decisions.">
+  <meta property="og:image" content="profile.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="profile.png">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js for Interactive Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Canvas for Constellation Data Effect -->
+  <canvas id="data-canvas"></canvas>
+  <div class="bg-grid-pattern"></div>
+
+  <div class="content-wrapper">
+
+    <!-- ===================================================================
+         NAVBAR
+         =================================================================== -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-avatar">
+            <img src="profile.png" alt="Dharmesh Kumar Profile Picture">
+          </div>
+          <div class="brand-meta">
+            <span class="brand-name">Dharmesh Kumar</span>
+            <span class="brand-title">Data & Reporting Analyst</span>
+          </div>
+        </a>
+
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#sandbox" class="nav-link">BI Simulator</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects (<span style="color:var(--accent-cyan); font-weight:700;">16</span>)</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#education" class="nav-link">Credentials</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <!-- Icon populated by script.js -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+            </svg>
+          </button>
+
+          <a href="#" data-resume-trigger class="btn btn-outline btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            Resume
+          </a>
+
+          <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+
+          <button class="mobile-toggle" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================================================================
+         HERO SECTION WITH PROFILE PICTURE
+         =================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-content">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span>Open to Roles • Senior Data & Reporting Analyst • Bangalore</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Dharmesh Kumar</span>
+            </h1>
+
+            <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-cyan); margin-top: -0.5rem; margin-bottom: 1.25rem;">
+              Data & Reporting Analyst | Power BI · Tableau · SQL · Python
+            </div>
+
+            <p class="hero-subtitle">
+              Senior Data Analyst at <strong>Quad AI</strong> and former Teaching Assistant at <strong>Coding Ninjas</strong> with <strong>4+ years of hands-on experience</strong> transforming massive datasets into executive dashboards and actionable business strategies.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Explore All 16 Projects
+              </a>
+              <a href="#sandbox" class="btn btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Interactive BI Demo
+              </a>
+              <a href="#" data-resume-trigger class="btn btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                Printable Resume
+              </a>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://www.linkedin.com/in/dharmesh-kumar-293a89235/" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+              </a>
+
+              <a href="https://github.com/Dharmeshkumar2327" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub Profile
+              </a>
+
+              <a href="#" data-copy-email class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Copy Email
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Profile Image Card with Floating Badges -->
+          <div class="hero-visual">
+            <div class="profile-card-container">
+              <div class="profile-card-glow"></div>
+              
+              <!-- Floating Chip Top Right -->
+              <div class="floating-chip chip-top-right">
+                <div class="chip-icon chip-icon-bi">📊</div>
+                <div class="chip-meta">
+                  <span class="chip-label">Verified Accuracy</span>
+                  <span class="chip-value">97% - 98% Rate</span>
+                </div>
+              </div>
+
+              <!-- Main Image Frame -->
+              <div class="profile-img-frame">
+                <div class="profile-img-inner">
+                  <img src="profile.png" alt="Dharmesh Kumar - Senior Data Analyst">
+                </div>
+              </div>
+
+              <!-- Floating Chip Bottom Left -->
+              <div class="floating-chip chip-bottom-left">
+                <div class="chip-icon chip-icon-sql">⚡</div>
+                <div class="chip-meta">
+                  <span class="chip-label">Experience</span>
+                  <span class="chip-value">4+ Years in Production BI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4-Stat Value Counters -->
+        <div class="hero-stats-banner">
+          <div class="stat-item">
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Years Hands-On Analytics</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">16+</div>
+            <div class="stat-label">GitHub & Production Repos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Model & Dashboard Accuracy</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">8x</div>
+            <div class="stat-label">Certified (IABAC, NASSCOM, etc.)</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT / EXECUTIVE BIO & SOFT SKILLS
+         =================================================================== -->
+    <section id="about" style="padding: 4rem 0;">
+      <div class="container">
+        <div class="glass-card" style="padding: 2.5rem;">
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 2.25rem; align-items: flex-start;">
+            
+            <div style="text-align: center;">
+              <div style="width: 130px; height: 130px; border-radius: 20px; overflow: hidden; border: 3px solid var(--accent-cyan); box-shadow: var(--shadow-glow); margin: 0 auto 0.75rem auto;">
+                <img src="profile.png" alt="Dharmesh Kumar" style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%;">
+              </div>
+              <span class="badge-tag">Quad AI</span>
+            </div>
+
+            <div>
+              <span class="section-badge">Executive Profile</span>
+              <h3 style="font-size: 1.65rem; margin-bottom: 0.75rem;">Data Analyst with 4+ Years of Driving Business Decisions</h3>
+              <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+                Certified Data Analyst with strong expertise in data cleaning, exploratory data analysis (EDA), visual modeling, and interactive dashboard development. Currently Senior Data Analyst at <strong>Quad AI</strong>, former Consultant at <strong>RUBIXE AI Solutions</strong>, and former <strong>Teaching Assistant at Coding Ninjas</strong>, where I mentored students in problem-solving and programming fundamentals.
+              </p>
+              <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                Passionate about leveraging data to drive informed decision-making, optimize organizational processes, and support business growth through Power BI, Tableau, PostgreSQL, Python, and Machine Learning.
+              </p>
+
+              <!-- Soft Skills Grid -->
+              <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary); margin-bottom: 0.5rem;">Core Soft Skills</h4>
+              <div class="soft-skills-cloud">
+                <span class="soft-skill-pill">🤝 Team Collaboration</span>
+                <span class="soft-skill-pill">💡 Problem-Solving</span>
+                <span class="soft-skill-pill">🎯 Decision-Making</span>
+                <span class="soft-skill-pill">📢 Communication & Stakeholders</span>
+                <span class="soft-skill-pill">🌱 Adaptability</span>
+                <span class="soft-skill-pill">👑 Leadership</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         INTERACTIVE LIVE ANALYTICS SANDBOX (POWER BI SIMULATOR)
+         =================================================================== -->
+    <section id="sandbox" class="sandbox-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Interactive Experience</span>
+          <h2 class="section-title">Live BI & Analytics Simulator</h2>
+          <p class="section-subtitle">
+            Interact with live simulated business datasets directly inside this browser. Switch domains to explore how I structure KPIs, design trend curves, and generate automated executive insights.
+          </p>
+        </div>
+
+        <div class="sandbox-container">
+          <!-- Sandbox Toolbar -->
+          <div class="sandbox-header">
+            <div class="sandbox-title-area">
+              <span class="powerbi-badge">POWER BI ENGINE</span>
+              <span id="sandbox-dataset-badge" class="badge-tag">Retail Intelligence</span>
+            </div>
+
+            <!-- Dataset Selector -->
+            <div class="sandbox-filters">
+              <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">DATASET:</span>
+              <button class="filter-btn active" data-dataset="retail">🛍️ Retail Purchases</button>
+              <button class="filter-btn" data-dataset="health">🏥 Hospital Admissions</button>
+              <button class="filter-btn" data-dataset="jobs">💼 Tech Job Salaries</button>
+              <button class="filter-btn" data-dataset="ml">🤖 ML Clusters (PCA)</button>
+            </div>
+
+            <!-- Quarter Filter -->
+            <div class="sandbox-filters">
+              <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">INTERVAL:</span>
+              <button class="filter-btn active" data-quarter="all">Full Year</button>
+              <button class="filter-btn" data-quarter="q1">Q1</button>
+              <button class="filter-btn" data-quarter="q2">Q2</button>
+              <button class="filter-btn" data-quarter="q3">Q3</button>
+              <button class="filter-btn" data-quarter="q4">Q4</button>
+            </div>
+          </div>
+
+          <!-- Sandbox Content -->
+          <div class="sandbox-body">
+            <!-- 4 KPI Cards -->
+            <div class="sandbox-kpi-grid">
+              <div class="sandbox-kpi-card">
+                <div class="sandbox-kpi-head">
+                  <span id="kpi-rev-lbl" class="kpi-label">Total Revenue</span>
+                  <div class="kpi-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="12" y1="1" x2="12" y2="23"></line>
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div id="kpi-rev" class="sandbox-kpi-num">$1.42M</div>
+                <div class="sandbox-kpi-foot">▲ 14.2% vs previous period</div>
+              </div>
+
+              <div class="sandbox-kpi-card">
+                <div class="sandbox-kpi-head">
+                  <span id="kpi-vol-lbl" class="kpi-label">Order Volume</span>
+                  <div class="kpi-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div id="kpi-vol" class="sandbox-kpi-num">24,850</div>
+                <div class="sandbox-kpi-foot">Steady month-over-month growth</div>
+              </div>
+
+              <div class="sandbox-kpi-card">
+                <div class="sandbox-kpi-head">
+                  <span id="kpi-aov-lbl" class="kpi-label">Avg Basket Value</span>
+                  <div class="kpi-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="9" cy="21" r="1"></circle>
+                      <circle cx="20" cy="21" r="1"></circle>
+                      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div id="kpi-aov" class="sandbox-kpi-num">$57.14</div>
+                <div class="sandbox-kpi-foot">Optimized via cross-sell logic</div>
+              </div>
+
+              <div class="sandbox-kpi-card">
+                <div class="sandbox-kpi-head">
+                  <span id="kpi-conv-lbl" class="kpi-label">Conversion Rate</span>
+                  <div class="kpi-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <div id="kpi-conv" class="sandbox-kpi-num">4.82%</div>
+                <div class="sandbox-kpi-foot">Benchmark: Top 10th percentile</div>
+              </div>
+            </div>
+
+            <!-- 2 Dynamic Charts Grid -->
+            <div class="sandbox-charts-grid">
+              <div class="chart-panel">
+                <div class="chart-panel-header">
+                  <h4 id="sandbox-main-title" class="chart-panel-title">Purchase Pattern & Basket Analytics — Trend Analysis</h4>
+                  <span class="chart-panel-badge">Interactive Timeline</span>
+                </div>
+                <div class="chart-container-large">
+                  <canvas id="sandbox-main-chart"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-panel">
+                <div class="chart-panel-header">
+                  <h4 id="sandbox-sub-title" class="chart-panel-title">Basket Composition Breakdown (%)</h4>
+                  <span class="chart-panel-badge">Dimensional Slice</span>
+                </div>
+                <div class="chart-container-large">
+                  <canvas id="sandbox-sub-chart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Automated Executive Insight Bar -->
+            <div class="sandbox-insights-bar">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span id="sandbox-insight-text" class="insight-text">
+                  <strong>Association Rule Mining:</strong> Cross-purchasing between Category A & Accessories spiked by <strong>+28.4%</strong> following basket-affinity shelf re-organization.
+                </span>
+              </div>
+              <button class="btn btn-outline btn-sm" onclick="showToast('Executive Insight logged!')">Share Insight</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TECHNICAL SKILLS & CORE COMPETENCIES
+         =================================================================== -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Technical Stack</span>
+          <h2 class="section-title">Core Competencies & Toolchain</h2>
+          <p class="section-subtitle">
+            A comprehensive analytics arsenal spanning business intelligence, database engineering, Python wrangling, and machine learning.
+          </p>
+        </div>
+
+        <div class="skills-categories-grid">
+
+          <!-- Card 1: BI & Visualization -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-icon-box icon-bi">📊</div>
+              <div>
+                <h3 class="skill-category-title">BI & Data Visualization</h3>
+                <p class="skill-category-subtitle">Executive storytelling & real-time monitoring</p>
+              </div>
+            </div>
+            <div class="skills-pill-cloud">
+              <span class="skill-pill featured">Power BI (DAX, Star Schema)</span>
+              <span class="skill-pill featured">Tableau (LOD, Storyboards)</span>
+              <span class="skill-pill">Advanced Excel</span>
+              <span class="skill-pill">VLOOKUP & INDEX-MATCH</span>
+              <span class="skill-pill">Pivot Tables</span>
+              <span class="skill-pill">Conditional Formatting</span>
+              <span class="skill-pill">Google Sheets</span>
+              <span class="skill-pill">KPI Architecture</span>
+            </div>
+            <ul class="skill-summary-list">
+              <li>Designed and shipped 15+ production dashboards with Power BI, Tableau, and Excel.</li>
+              <li>Engineered custom DAX measures for YoY variance, rolling time intelligence, and dynamic cohort metrics.</li>
+              <li>Formulated multi-source data transformations inside Power Query M and Tableau Prep.</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Languages & Databases -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-icon-box icon-sql">🗄️</div>
+              <div>
+                <h3 class="skill-category-title">Languages & Database Management</h3>
+                <p class="skill-category-subtitle">PostgreSQL, SQL Server, MySQL, Schema Design</p>
+              </div>
+            </div>
+            <div class="skills-pill-cloud">
+              <span class="skill-pill featured">SQL (PostgreSQL, T-SQL, MySQL)</span>
+              <span class="skill-pill featured">Complex Multi-Table Joins</span>
+              <span class="skill-pill">Subqueries & Derived Tables</span>
+              <span class="skill-pill">Common Table Expressions (CTEs)</span>
+              <span class="skill-pill featured">Window Functions (LAG, LEAD, DENSE_RANK)</span>
+              <span class="skill-pill">Views & Stored Procedures</span>
+              <span class="skill-pill">B-Tree Indexing</span>
+              <span class="skill-pill">Data Integrity Checks</span>
+            </div>
+            <ul class="skill-summary-list">
+              <li>Crafted 30+ comprehensive analytical queries analyzing patient flows, admission lags, and diagnostic trends.</li>
+              <li>Optimized slow-running queries by refactoring subqueries into indexed CTEs, trimming execution times by 4x.</li>
+              <li>Built normalized relational databases (FoodserviceDB, Zomato SQL) with stored procedures.</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Python Data Stack -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-icon-box icon-python">🐍</div>
+              <div>
+                <h3 class="skill-category-title">Python Data Stack</h3>
+                <p class="skill-category-subtitle">Data manipulation, cleaning & scientific computing</p>
+              </div>
+            </div>
+            <div class="skills-pill-cloud">
+              <span class="skill-pill featured">Python (Core, Automation)</span>
+              <span class="skill-pill featured">Pandas (DataFrames, GroupBy)</span>
+              <span class="skill-pill">NumPy (Vectorized Arrays)</span>
+              <span class="skill-pill">SciPy (Statistical Testing)</span>
+              <span class="skill-pill">Matplotlib</span>
+              <span class="skill-pill featured">Seaborn (Distribution Plots)</span>
+              <span class="skill-pill">Scikit-learn</span>
+              <span class="skill-pill">Jupyter Notebooks</span>
+            </div>
+            <ul class="skill-summary-list">
+              <li>Built automated ingestion and cleaning pipelines handling hundreds of thousands of transactional records.</li>
+              <li>Conducted exploratory statistical analyses (hypothesis testing, variance analysis, correlation matrices).</li>
+              <li>Authored the 20-Day Python Mini Projects challenge covering automation, data structures, and algorithms.</li>
+            </ul>
+          </div>
+
+          <!-- Card 4: Analytics & Machine Learning -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-icon-box icon-ml">🧠</div>
+              <div>
+                <h3 class="skill-category-title">Predictive Analytics & ML</h3>
+                <p class="skill-category-subtitle">Clustering, Deep Learning, Churn Modeling & AI</p>
+              </div>
+            </div>
+            <div class="skills-pill-cloud">
+              <span class="skill-pill featured">Exploratory Data Analysis (EDA)</span>
+              <span class="skill-pill">Handling Missing Data</span>
+              <span class="skill-pill">Outlier Detection (IQR, Z-Score)</span>
+              <span class="skill-pill featured">K-Means, DBSCAN, GMM</span>
+              <span class="skill-pill featured">PCA, t-SNE, UMAP</span>
+              <span class="skill-pill">PyTorch Tabular ResNet</span>
+              <span class="skill-pill">Random Forest & Classification</span>
+              <span class="skill-pill">Agentic AI & RAG</span>
+            </div>
+            <ul class="skill-summary-list">
+              <li>Segmented enterprise consumer base into 4 behavioral clusters with K-Means and PCA (Silhouette 0.68).</li>
+              <li>Built deep learning Tabular ResNet customer churn model with 0.753 PR-AUC and retention ROI simulator.</li>
+              <li>Designed multi-agent AI data analyst (LLM Advance Datapilot AI) executing sandboxed Pandas queries.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         FEATURED PROJECTS SHOWCASE (ALL 16 PROJECTS)
+         =================================================================== -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Complete Portfolio</span>
+          <h2 class="section-title">All Featured Projects & Case Studies</h2>
+          <p class="section-subtitle">
+            Explore 16 industry and open-source projects spanning executive Power BI & Tableau dashboards, advanced PostgreSQL schemas, machine learning models, and Python automation.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="projects-filter-bar">
+          <button class="proj-filter-btn active" data-filter="all">All Projects (16)</button>
+          <button class="proj-filter-btn" data-filter="industry">Industry Experience (4)</button>
+          <button class="proj-filter-btn" data-filter="bi">Power BI & Tableau (6)</button>
+          <button class="proj-filter-btn" data-filter="sql">SQL & Databases (3)</button>
+          <button class="proj-filter-btn" data-filter="ml">Machine Learning & AI (5)</button>
+          <button class="proj-filter-btn" data-filter="python">Python & Automation (4)</button>
+        </div>
+
+        <!-- Projects Responsive Grid -->
+        <div class="projects-grid">
+
+          <!-- 1. Purchase Pattern Analytics -->
+          <article class="project-card" data-category="industry python sql">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Quad AI</span>
+                <span class="project-timeline">Dec 2025 – Feb 2026</span>
+              </div>
+              <span class="project-accuracy-badge">✓ 97% Accuracy</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Purchase Pattern Analytics</h3>
+              <p class="project-desc">
+                Conducted rigorous EDA on retail transactions to identify data skew, missing attributes, and product associations using Python and Matplotlib, driving sales strategy and customer recommendations.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python (Pandas)</span>
+                <span class="project-tag">Matplotlib</span>
+                <span class="project-tag">SQL</span>
+                <span class="project-tag">EDA</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="purchase-pattern">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Medical Data History Analysis -->
+          <article class="project-card" data-category="industry sql">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Rubixe AI Solutions</span>
+                <span class="project-timeline">Jul 2025 – Sep 2025</span>
+              </div>
+              <span class="project-accuracy-badge">✓ 97% Accuracy</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Medical Data History Analysis</h3>
+              <p class="project-desc">
+                Analyzed real-world healthcare records across patient, admission, and doctor tables using 30+ optimized PostgreSQL queries with BMI calculations, NULL handling, and cohort readmission grouping.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">Advanced Excel</span>
+                <span class="project-tag">CTEs</span>
+                <span class="project-tag">Window Functions</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="medical-data">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Job Market Analysis Dashboard -->
+          <article class="project-card" data-category="industry bi python sql">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Rubixe AI Solutions</span>
+                <span class="project-timeline">Feb 2025 – Mar 2025</span>
+              </div>
+              <span class="project-accuracy-badge">✓ 98% Accuracy</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Job Market Analysis Dashboard</h3>
+              <p class="project-desc">
+                Interactive Power BI dashboard tracking salary insights, job locations, and tech industry demand using SQL and Python. Uncovered 34% salary premium for combined Power BI + SQL skills.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">DAX</span>
+                <span class="project-tag">SQL</span>
+                <span class="project-tag">Python (Pandas)</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="job-market">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327/project__job_market_analysis.Markit" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Deep Learning Customer Churn Intelligence -->
+          <article class="project-card" data-category="ml python bi">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">PyTorch & NumPy</span>
+                <span class="project-timeline">Featured Open Source</span>
+              </div>
+              <span class="project-accuracy-badge">0.753 PR-AUC</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Deep Learning Churn Intelligence</h3>
+              <p class="project-desc">
+                Entity-embedding Tabular ResNet built from scratch in NumPy & PyTorch. Features 30-trial tuning, 5-model ensemble, calibrated probabilities, retention actions, and a Tableau dashboard ROI simulator.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">PyTorch</span>
+                <span class="project-tag">Tabular ResNet</span>
+                <span class="project-tag">Tableau</span>
+                <span class="project-tag">NumPy</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="deep-learning-churn">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327/Deep_Learning_Customer_Churn_Intelligence" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. LLM Advance Datapilot AI -->
+          <article class="project-card" data-category="ml python">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Multi-Agent AI</span>
+                <span class="project-timeline">Agentic Analytics</span>
+              </div>
+              <span class="badge-tag">LLM Agent</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">LLM Advance Datapilot AI</h3>
+              <p class="project-desc">
+                Multi-agent LLM data analyst in Python. Ask questions in plain English: planner, analyst, and reviewer agents run sandboxed Pandas/SQL, perform statistical tests, and generate HTML reports.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">LLM Agents</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">SQL Sandbox</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="llm-datapilot">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327/LLM_Advance_Datapilot_AI" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Blinkit Grocery Store Dashboard -->
+          <article class="project-card" data-category="bi">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Power BI Enterprise</span>
+                <span class="project-timeline">FMCG Analytics</span>
+              </div>
+              <span class="badge-tag">$1.20M Sales</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Blinkit Grocery Sales Analytics</h3>
+              <p class="project-desc">
+                Interactive Power BI dashboard analyzing Blinkit grocery sales across outlet types, sizes, item categories, and fat-content segments across $1.20M sales and 8,523 total inventory items.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">DAX Measures</span>
+                <span class="project-tag">Data Modeling</span>
+                <span class="project-tag">Retail KPIs</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="blinkit-grocery">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327/Blinkit-Goscery-Store" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Customer Segmentation Clustering -->
+          <article class="project-card" data-category="industry ml python">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Unsupervised ML</span>
+                <span class="project-timeline">Sep 2024 – Dec 2024</span>
+              </div>
+              <span class="project-accuracy-badge">Silhouette 0.68</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Customer Segmentation & Clustering</h3>
+              <p class="project-desc">
+                Applied K-Means, DBSCAN, and GMM clustering along with PCA, t-SNE, and UMAP to identify customer segments based on purchasing behavior and demographics for targeted campaign personalization.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">K-Means</span>
+                <span class="project-tag">PCA</span>
+                <span class="project-tag">Scikit-learn</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="customer-segmentation">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327/customer-segmentation-clustering" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Time Series Retail Sales Forecasting -->
+          <article class="project-card" data-category="ml python">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Time Series Analysis</span>
+                <span class="project-timeline">Forecasting</span>
+              </div>
+              <span class="badge-tag">Predictive</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Retail Sales Forecasting</h3>
+              <p class="project-desc">
+                End-to-end retail forecasting pipeline using Python, Pandas, and time series models. Includes data cleaning, trend and seasonality decomposition, model evaluation, and demand projection.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Time Series</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">Forecasting</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Dharmeshkumar2327/time_series_retail_sales_forecasting_COMPLETE_GITHUB" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View GitHub Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. FoodserviceDB Analytics -->
+          <article class="project-card" data-category="sql">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">SQL Server / T-SQL</span>
+                <span class="project-timeline">Database Engineering</span>
+              </div>
+              <span class="badge-tag">Stored Procedures</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">FoodserviceDB Analytics</h3>
+              <p class="project-desc">
+                SQL Server database project for analyzing restaurant data, cuisines, customer demographics, and ratings. Features normalized schema, efficient T-SQL queries, indexing, and data quality checks.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">T-SQL</span>
+                <span class="project-tag">SQL Server</span>
+                <span class="project-tag">Stored Procedures</span>
+                <span class="project-tag">Indexing</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="foodservicedb">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327/foodservicedb-analytics" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. HR Dashboard with Tableau -->
+          <article class="project-card" data-category="bi">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Tableau Software</span>
+                <span class="project-timeline">People Analytics</span>
+              </div>
+              <span class="badge-tag">HR Metrics</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">HR Workforce Dashboard</h3>
+              <p class="project-desc">
+                Interactive HR dashboard built with Tableau to analyze employee demographics, workforce trends, hiring velocity, attrition rates, salary distribution, departments, and employee performance.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Tableau</span>
+                <span class="project-tag">LOD Expressions</span>
+                <span class="project-tag">HR Analytics</span>
+                <span class="project-tag">KPIs</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Dharmeshkumar2327/HR_DASHBOARD_-WITH_TABLEAU" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View GitHub Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. Amazon Prime Content Analytics -->
+          <article class="project-card" data-category="bi python sql">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Power BI + SQL</span>
+                <span class="project-timeline">Media Analytics</span>
+              </div>
+              <span class="badge-tag">Entertainment</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Amazon Prime Content Analytics</h3>
+              <p class="project-desc">
+                Interactive Power BI dashboard analyzing Amazon Prime Movies & TV Shows using Power BI, SQL, and Python. Includes data cleaning, genre and rating distributions, release-year patterns, and regional insights.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">SQL</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Content Trends</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Dharmeshkumar2327/amazon-prime-content-analytics" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View GitHub Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12. Zomato SQL Analytics -->
+          <article class="project-card" data-category="sql">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">MySQL Workbench</span>
+                <span class="project-timeline">Restaurant Analytics</span>
+              </div>
+              <span class="badge-tag">MySQL</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Zomato SQL Analytics</h3>
+              <p class="project-desc">
+                Zomato Restaurant Data Analysis using MySQL Workbench. Explore restaurant ratings, cuisines, pricing brackets, locations, and customer votes using SQL data cleaning and aggregation queries.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">SQL Workbench</span>
+                <span class="project-tag">Aggregations</span>
+                <span class="project-tag">Consumer Analytics</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Dharmeshkumar2327/Zomato_SQL_Analytics_Project" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View GitHub Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 13. Heart Attack Risk Prediction ML -->
+          <article class="project-card" data-category="ml python">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">ML + Agentic AI</span>
+                <span class="project-timeline">Healthcare AI</span>
+              </div>
+              <span class="badge-tag">Random Forest</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Heart Attack Prediction & AI Assistant</h3>
+              <p class="project-desc">
+                AI-powered heart risk analysis combining Random Forest prediction with an LLM-based assistant for natural-language interaction, knowledge retrieval (RAG), and explainable clinical responses.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Machine Learning</span>
+                <span class="project-tag">LLM / RAG</span>
+                <span class="project-tag">Random Forest</span>
+                <span class="project-tag">Python</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Dharmeshkumar2327/heart-attack-prediction-machine-learning" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View GitHub Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 14. E-Commerce Sales Report -->
+          <article class="project-card" data-category="bi">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Power BI + Excel</span>
+                <span class="project-timeline">Sales Reporting</span>
+              </div>
+              <span class="badge-tag">Financial BI</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">E-Commerce Sales Analysis</h3>
+              <p class="project-desc">
+                Interactive sales analysis project using Power BI, Excel, and SQL to analyze sales volume, revenue growth, profit margins, product categories, and regional performance.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">Excel</span>
+                <span class="project-tag">Revenue Analytics</span>
+                <span class="project-tag">Profit Margins</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Dharmeshkumar2327/ECOMM-SALE-repoert" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View GitHub Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 15. Virat Kohli Career Statistics Dashboard -->
+          <article class="project-card" data-category="bi">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Sports Analytics</span>
+                <span class="project-timeline">Power BI</span>
+              </div>
+              <span class="badge-tag">Cricket BI</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Virat Kohli Career Statistics</h3>
+              <p class="project-desc">
+                Interactive cricket career statistics dashboard analyzing batting performance, match conditions, centuries, batting averages, strike rates, and multi-format trends using Power BI.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">Sports Analytics</span>
+                <span class="project-tag">Performance Index</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Dharmeshkumar2327/virat-kohli-statistics" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View GitHub Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 16. 20 Days Python Mini Projects Challenge -->
+          <article class="project-card" data-category="python">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Coding Challenge</span>
+                <span class="project-timeline">Python Mastery</span>
+              </div>
+              <span class="badge-tag">20 Projects</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">20-Day Python Mini Projects</h3>
+              <p class="project-desc">
+                A 20-Day Python coding challenge covering loops, conditions, functions, data structures, file handling, GUI apps (Tkinter clock, IP lookup), and programmatic automation.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python 3</span>
+                <span class="project-tag">Automation</span>
+                <span class="project-tag">Algorithms</span>
+                <span class="project-tag">Jupyter</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Dharmeshkumar2327/20_DAYS_Python_Mini_Projecs" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View GitHub Repo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PROFESSIONAL WORK EXPERIENCE (TIMELINE)
+         =================================================================== -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Career Track</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-subtitle">
+            4+ years of continuous growth from foundational data analysis to leading senior enterprise analytics.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Role 1: Quad AI -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Sr. Data Analyst</h3>
+                  <div class="company-name">
+                    <span>Quad AI</span>
+                    <span>• Bangalore, India</span>
+                  </div>
+                </div>
+                <span class="role-period">Dec 2025 – Present</span>
+              </div>
+              <ul class="experience-bullets">
+                <li>Creating interactive dashboards and visual reports for business insights and decision-making.</li>
+                <li>Performing data cleaning, transformation, and analysis using Python and SQL.</li>
+                <li>Developing and optimizing SQL queries for extracting and managing large production datasets.</li>
+                <li>Generating business reports and presenting analytical findings to support organizational goals.</li>
+                <li>Assisting in Business Intelligence (BI) solutions and data-driven strategy development.</li>
+              </ul>
+              <div class="exp-tech-tags">
+                <span class="badge-tag">Power BI</span>
+                <span class="badge-tag">Python (Pandas, Seaborn)</span>
+                <span class="badge-tag">PostgreSQL</span>
+                <span class="badge-tag">EDA</span>
+                <span class="badge-tag">Executive BI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2: Rubixe AI Solutions -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Analyst Consultant</h3>
+                  <div class="company-name">
+                    <span>RUBIXE AI SOLUTIONS</span>
+                    <span>• Bangalore, India</span>
+                  </div>
+                </div>
+                <span class="role-period">Dec 2024 – Dec 2025</span>
+              </div>
+              <ul class="experience-bullets">
+                <li>Working on Business Intelligence (BI) projects using Power BI and Tableau.</li>
+                <li>Analyzing large datasets and creating interactive dashboards for decision-making.</li>
+                <li>Developing SQL queries for data extraction, transformation, and reporting.</li>
+                <li>Utilizing Python (Pandas, Matplotlib) for data cleaning and visualization.</li>
+              </ul>
+              <div class="exp-tech-tags">
+                <span class="badge-tag">Tableau</span>
+                <span class="badge-tag">Power BI</span>
+                <span class="badge-tag">SQL Optimization</span>
+                <span class="badge-tag">Python</span>
+                <span class="badge-tag">Client Consulting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 3: Arham Foundation -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Analyst</h3>
+                  <div class="company-name">
+                    <span>ARHAM FOUNDATION</span>
+                    <span>• India</span>
+                  </div>
+                </div>
+                <span class="role-period">Jan 2024 – Dec 2024</span>
+              </div>
+              <ul class="experience-bullets">
+                <li>Analyzed business and operational datasets to deliver insights that improved decision-making and performance.</li>
+                <li>Created interactive dashboards and reports using Power BI / Tableau, enabling clear visualization of KPIs and trends.</li>
+                <li>Performed data cleaning, transformation, and exploratory analysis using Python (Pandas, NumPy, Matplotlib).</li>
+                <li>Developed efficient SQL queries for data extraction, validation, and reporting from multiple data sources.</li>
+              </ul>
+              <div class="exp-tech-tags">
+                <span class="badge-tag">Power BI</span>
+                <span class="badge-tag">Tableau</span>
+                <span class="badge-tag">SQL</span>
+                <span class="badge-tag">Python</span>
+                <span class="badge-tag">KPI Tracking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 4: Sri Chaitanya Group -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Analyst</h3>
+                  <div class="company-name">
+                    <span>SRI CHAITANYA GROUP</span>
+                    <span>• India</span>
+                  </div>
+                </div>
+                <span class="role-period">Jul 2022 – Dec 2023</span>
+              </div>
+              <ul class="experience-bullets">
+                <li>Built interactive dashboards and performance reports using Power BI / Tableau.</li>
+                <li>Cleaned, transformed, and validated data using Python (Pandas, NumPy).</li>
+                <li>Developed and optimized SQL queries for data extraction, reporting, and automation.</li>
+                <li>Identified trends, patterns, and anomalies through exploratory data analysis (EDA).</li>
+              </ul>
+              <div class="exp-tech-tags">
+                <span class="badge-tag">Power BI</span>
+                <span class="badge-tag">SQL</span>
+                <span class="badge-tag">Python (Pandas, NumPy)</span>
+                <span class="badge-tag">EDA</span>
+                <span class="badge-tag">Automation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         EDUCATION & CERTIFICATIONS (ALL 8 CERTIFICATES)
+         =================================================================== -->
+    <section id="education" class="edu-cert-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Credentials</span>
+          <h2 class="section-title">Education & Certifications</h2>
+          <p class="section-subtitle">
+            Formal technical degrees in Data Science paired with globally recognized analytics certifications.
+          </p>
+        </div>
+
+        <div class="edu-cert-grid">
+
+          <!-- Left Column: Education -->
+          <div class="edu-column">
+            <h3 class="column-heading">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span>Academic Degrees</span>
+            </h3>
+
+            <!-- M.Tech -->
+            <div class="edu-card">
+              <h4 class="degree-title">M.Tech in Data Science</h4>
+              <div class="institution-name">North East Christian University</div>
+              <div class="edu-meta">
+                <span>2024 – 2026 (Pursuing)</span>
+                <span class="grade-badge">Score: 70%</span>
+              </div>
+            </div>
+
+            <!-- MCA -->
+            <div class="edu-card">
+              <h4 class="degree-title">MCA in Data Science</h4>
+              <div class="institution-name">North East Christian University</div>
+              <div class="edu-meta">
+                <span>2022 – 2024</span>
+                <span class="grade-badge">Score: 72%</span>
+              </div>
+            </div>
+
+            <!-- B.Com -->
+            <div class="edu-card">
+              <h4 class="degree-title">B.Com (Bachelor of Commerce)</h4>
+              <div class="institution-name">IG Govt. PG College Tohana, CDLU University</div>
+              <div class="edu-meta">
+                <span>2018 – 2022</span>
+                <span class="grade-badge">Score: 61%</span>
+              </div>
+            </div>
+
+            <!-- 12th -->
+            <div class="edu-card">
+              <h4 class="degree-title">Higher Secondary Education (12th)</h4>
+              <div class="institution-name">Haryana Board of School Education</div>
+              <div class="edu-meta">
+                <span>2016 – 2017</span>
+                <span class="grade-badge">Score: 71%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Certifications (All 8) -->
+          <div class="cert-column">
+            <h3 class="column-heading">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+              <span>Certificates (8 Verified)</span>
+            </h3>
+
+            <!-- 1. IABAC -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">🏅</div>
+              <div>
+                <h4 class="cert-name">IABAC Certified Data Analyst</h4>
+                <div class="cert-issuer">International Association of Business Analytics Certifications</div>
+              </div>
+            </div>
+
+            <!-- 2. DATAMITES -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">🎖️</div>
+              <div>
+                <h4 class="cert-name">Certified Data Analyst</h4>
+                <div class="cert-issuer">DATAMITES Global Institute</div>
+              </div>
+            </div>
+
+            <!-- 3. NASSCOM -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">📜</div>
+              <div>
+                <h4 class="cert-name">Certified Data Scientist</h4>
+                <div class="cert-issuer">NASSCOM (FutureSkills Prime)</div>
+              </div>
+            </div>
+
+            <!-- 4. OpenAI ChatGPT Course -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">🤖</div>
+              <div>
+                <h4 class="cert-name">OpenAI ChatGPT Course</h4>
+                <div class="cert-issuer">Udemy</div>
+              </div>
+            </div>
+
+            <!-- 5. Intro to DBMS -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">🗄️</div>
+              <div>
+                <h4 class="cert-name">Introduction To DBMS</h4>
+                <div class="cert-issuer">Udemy</div>
+              </div>
+            </div>
+
+            <!-- 6. DBMS Uncovered -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">⚡</div>
+              <div>
+                <h4 class="cert-name">DBMS Uncovered</h4>
+                <div class="cert-issuer">Udemy</div>
+              </div>
+            </div>
+
+            <!-- 7. Data Structure in C++ -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">💻</div>
+              <div>
+                <h4 class="cert-name">Data Structure in C++</h4>
+                <div class="cert-issuer">Coding Ninjas</div>
+              </div>
+            </div>
+
+            <!-- 8. Intro to C -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">🧩</div>
+              <div>
+                <h4 class="cert-name">Introduction to C</h4>
+                <div class="cert-issuer">Coding Ninjas</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CONTACT & INQUIRY SECTION
+         =================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Get In Touch</span>
+          <h2 class="section-title">Let's Discuss Opportunities</h2>
+          <p class="section-subtitle">
+            Looking for a Senior Data Analyst who can immediately deliver Power BI dashboards, optimize PostgreSQL schemas, or build predictive pipelines? Let's connect.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Card -->
+          <div class="contact-info-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Contact Information</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+              Based in Bangalore, Karnataka. Open to senior data analyst opportunities, BI consulting, and high-impact analytics projects.
+            </p>
+
+            <div class="contact-links-list">
+              <!-- Email -->
+              <a href="mailto:dharmeshkumar2702@gmail.com" class="contact-link-item">
+                <div class="contact-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-detail-col">
+                  <span class="contact-label">Email Address</span>
+                  <span class="contact-value">dharmeshkumar2702@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- Phone -->
+              <a href="tel:+917015139561" class="contact-link-item">
+                <div class="contact-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="contact-detail-col">
+                  <span class="contact-label">Phone & WhatsApp</span>
+                  <span class="contact-value">+91-7015139561</span>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="contact-link-item">
+                <div class="contact-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-detail-col">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Bangalore, Karnataka, India</span>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/dharmesh-kumar-293a89235/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <div class="contact-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-col">
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">linkedin.com/in/dharmesh-kumar-293a89235</span>
+                </div>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/Dharmeshkumar2327" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <div class="contact-icon-wrapper">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-col">
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">github.com/Dharmeshkumar2327</span>
+                </div>
+              </a>
+            </div>
+
+            <div style="margin-top: auto; display: flex; gap: 0.75rem;">
+              <button class="btn btn-outline btn-sm" data-copy-email style="flex: 1;">
+                📋 Copy Email
+              </button>
+              <button class="btn btn-secondary btn-sm" data-resume-trigger style="flex: 1;">
+                📄 View Resume
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Send a Direct Message</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
+              Fill out this form and it will format and dispatch directly to my inbox.
+            </p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label class="form-label" for="form-name">Your Full Name</label>
+                <input class="form-control" type="text" id="form-name" placeholder="e.g. Alex Morgan" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-email">Work Email Address</label>
+                <input class="form-control" type="email" id="form-email" placeholder="e.g. alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-subject">Subject</label>
+                <input class="form-control" type="text" id="form-subject" placeholder="Senior Data Analyst Role / Consultation Inquiry" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-message">Message Details</label>
+                <textarea class="form-control" id="form-message" placeholder="Describe the role or project requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Dispatch Inquiry</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         FOOTER
+         =================================================================== -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="brand-meta" style="flex-direction: row; align-items: center; gap: 0.75rem;">
+          <img src="profile.png" alt="Dharmesh Kumar" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+          <div>
+            <span style="font-weight: 700; color: var(--text-primary); display: block;">Dharmesh Kumar</span>
+            <span class="footer-copy">Data & Reporting Analyst • Bangalore, Karnataka, India</span>
+          </div>
+        </div>
+
+        <div class="footer-copy">
+          Designed with data-centric precision • &copy; 2026 Dharmesh Kumar. All rights reserved.
+        </div>
+
+        <a href="#hero" class="footer-back-to-top">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+  </div> <!-- End .content-wrapper -->
+
+  <!-- ===================================================================
+       PROJECT DEEP-DIVE MODAL
+       =================================================================== -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--accent-cyan);">TECHNICAL CASE STUDY</span>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div id="modal-project-content" class="modal-body">
+        <!-- Injected dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       RESUME VIEWER & PRINTABLE MODAL
+       =================================================================== -->
+  <div id="resume-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width: 860px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-weight: 700; color: var(--text-primary);">Resume Preview</span>
+          <span class="badge-tag">Printable PDF Ready</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;" class="modal-actions-print-hide">
+          <button id="print-resume-btn" class="btn btn-primary btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print / Save as PDF
+          </button>
+          <button id="resume-modal-close" class="modal-close-btn" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+
+      <div class="modal-body" style="background: #e5e7eb; padding: 1.5rem;">
+        
+        <!-- Clean Printable Resume Sheet -->
+        <div class="resume-paper">
+          <div style="text-align: center; border-bottom: 2px solid #2563eb; padding-bottom: 1rem; margin-bottom: 1rem;">
+            <h1>DHARMESH KUMAR</h1>
+            <div class="res-header-sub">Data & Reporting Analyst | Power BI, Tableau, SQL, Python | Business & Financial Analytics</div>
+            <div class="res-contacts" style="justify-content: center;">
+              <span>📍 Bangalore, Karnataka, India</span>
+              <span>📞 +91-7015139561</span>
+              <span>✉️ dharmeshkumar2702@gmail.com</span>
+              <span>🔗 <a href="https://www.linkedin.com/in/dharmesh-kumar-293a89235/" target="_blank" style="color: #2563eb; text-decoration: none;">LinkedIn</a></span>
+              <span>🐙 <a href="https://github.com/Dharmeshkumar2327" target="_blank" style="color: #2563eb; text-decoration: none;">GitHub</a></span>
+            </div>
+          </div>
+
+          <!-- Professional Summary -->
+          <div class="res-sec-title">Professional Summary</div>
+          <p>
+            Data Analyst with 4+ years of hands-on experience in SQL, Python, Excel, Power BI, and Tableau. Certified Data Analyst with strong expertise in data cleaning, analysis, visualization, and dashboard development. Currently contributing to Quad AI as Sr. Data Analyst and RUBIXE as Data Analyst Consultant. Former Teaching Assistant at Coding Ninjas with strong problem-solving, communication, and collaboration skills.
+          </p>
+
+          <!-- Technical Skills -->
+          <div class="res-sec-title">Technical Skills</div>
+          <p><strong>Data Analysis & Visualization:</strong> Power BI, Tableau, Excel, Exploratory Data Analysis (EDA)</p>
+          <p><strong>Python Libraries:</strong> Pandas, NumPy, SciPy, Matplotlib, Seaborn, Scikit-learn</p>
+          <p><strong>Database Management:</strong> SQL (PostgreSQL; Joins, Subqueries, CTEs, Window Functions, Views, Indexing)</p>
+          <p><strong>Machine Learning:</strong> Classification, Regression, Clustering (K-Means, PCA)</p>
+          <p><strong>Data Cleaning & Processing:</strong> Data Preprocessing, Handling Missing Data, Outlier Detection</p>
+          <p><strong>Excel Functions:</strong> VLOOKUP, INDEX-MATCH, Pivot Tables, Conditional Formatting</p>
+          <p><strong>Tools:</strong> Git, GitHub, Google Sheets, PowerPoint, Jupyter Notebook</p>
+
+          <!-- Core Competencies -->
+          <div class="res-sec-title">Core Competencies</div>
+          <p>• <strong>Business Intelligence & Analytics:</strong> Dashboard development, KPI tracking, executive reporting</p>
+          <p>• <strong>Predictive Analytics:</strong> Customer churn modeling, trend forecasting, risk assessment</p>
+          <p>• <strong>Data-Driven Decision-Making:</strong> Statistical analysis, hypothesis testing, A/B testing</p>
+          <p>• <strong>Business Process Optimization:</strong> Workflow automation, data validation, efficiency improvement</p>
+          <p>• <strong>Stakeholder Management:</strong> Cross-functional collaboration, training delivery, client relations</p>
+
+          <!-- Work Experience -->
+          <div class="res-sec-title">Work Experience</div>
+          
+          <div class="res-role-head">
+            <span>Sr. Data Analyst – Quad AI</span>
+            <span class="res-role-date">Dec 2025 – Present</span>
+          </div>
+          <ul>
+            <li>Creating interactive dashboards and visual reports for business insights and decision-making.</li>
+            <li>Performing data cleaning, transformation, and analysis using Python and SQL.</li>
+            <li>Developing and optimizing SQL queries for extracting and managing large datasets.</li>
+            <li>Generating business reports and presenting analytical findings to support organizational goals.</li>
+            <li>Assisting in Business Intelligence (BI) solutions and data-driven strategy development.</li>
+          </ul>
+
+          <div class="res-role-head">
+            <span>Data Analyst Consultant – RUBIXE AI SOLUTIONS</span>
+            <span class="res-role-date">Dec 2024 – Dec 2025</span>
+          </div>
+          <ul>
+            <li>Working on Business Intelligence (BI) projects using Power BI and Tableau.</li>
+            <li>Analyzing large datasets and creating interactive dashboards for decision-making.</li>
+            <li>Developing SQL queries for data extraction, transformation, and reporting.</li>
+            <li>Utilizing Python (Pandas, Matplotlib) for data cleaning and visualization.</li>
+          </ul>
+
+          <div class="res-role-head">
+            <span>Data Analyst – ARHAM FOUNDATION</span>
+            <span class="res-role-date">Jan 2024 – Dec 2024</span>
+          </div>
+          <ul>
+            <li>Analyzed business and operational datasets to deliver insights that improved decision-making and performance.</li>
+            <li>Created interactive dashboards and reports using Power BI / Tableau, enabling clear visualization of KPIs and trends.</li>
+            <li>Performed data cleaning, transformation, and exploratory analysis using Python (Pandas, NumPy, Matplotlib).</li>
+            <li>Developed efficient SQL queries for data extraction, validation, and reporting from multiple data sources.</li>
+          </ul>
+
+          <div class="res-role-head">
+            <span>Data Analyst – SRI CHAITANYA GROUP</span>
+            <span class="res-role-date">Jul 2022 – Dec 2023</span>
+          </div>
+          <ul>
+            <li>Built interactive dashboards and performance reports using Power BI / Tableau.</li>
+            <li>Cleaned, transformed, and validated data using Python (Pandas, NumPy).</li>
+            <li>Developed and optimized SQL queries for data extraction, reporting, and automation.</li>
+            <li>Identified trends, patterns, and anomalies through exploratory data analysis (EDA).</li>
+          </ul>
+
+          <!-- Projects -->
+          <div class="res-sec-title">Projects</div>
+          
+          <div class="res-role-head">
+            <span>Purchase Pattern Analytics | QUAD AI (Accuracy: 97%)</span>
+            <span class="res-role-date">Dec 2025 – Feb 2026</span>
+          </div>
+          <ul>
+            <li>Performed EDA to identify missing values, outliers, and key purchase trends; cleaned and transformed data for analysis.</li>
+            <li>Built visualizations to display item frequency, association rules, and product relationships using Python and Matplotlib.</li>
+            <li>Delivered actionable insights to support sales strategies and improve customer experience.</li>
+          </ul>
+
+          <div class="res-role-head">
+            <span>Medical Data History Analysis | RUBIXE AI SOLUTIONS (Accuracy: 97%)</span>
+            <span class="res-role-date">Jul 2025 – Sep 2025</span>
+          </div>
+          <ul>
+            <li>Analyzed real-world healthcare data using 30+ SQL queries across patients, admissions, and doctors' tables.</li>
+            <li>Performed data cleaning, aggregation, and filtering to derive insights on patient demographics, diagnoses, and admission trends.</li>
+            <li>Implemented BMI calculation, NULL handling, and data grouping for reporting.</li>
+          </ul>
+
+          <div class="res-role-head">
+            <span>Job Market Analysis Dashboard | RUBIXE AI SOLUTIONS (Accuracy: 98%)</span>
+            <span class="res-role-date">Feb 2025 – Mar 2025</span>
+          </div>
+          <ul>
+            <li>Created an interactive dashboard for job market trends using Power BI, SQL, Python, and Excel.</li>
+            <li>Analyzed salary insights, job locations, and industry demand.</li>
+          </ul>
+
+          <div class="res-role-head">
+            <span>Customer Segmentation Analysis with Machine Learning</span>
+            <span class="res-role-date">Sep 2024 – Dec 2024</span>
+          </div>
+          <ul>
+            <li>Performed customer segmentation to identify purchasing patterns and group customers based on behavior using K-Means and PCA.</li>
+            <li>Provided insights for targeted marketing and personalized customer engagement strategies.</li>
+          </ul>
+
+          <!-- Soft Skills -->
+          <div class="res-sec-title">Soft Skills</div>
+          <p>• Leadership &bull; Problem-Solving &bull; Communication &bull; Team Collaboration &bull; Adaptability &bull; Decision-Making</p>
+
+          <!-- Education -->
+          <div class="res-sec-title">Education</div>
+          <div class="res-role-head">
+            <span>North East Christian University – M.Tech in (Data Science) [70%]</span>
+            <span class="res-role-date">2024 – 2026</span>
+          </div>
+          <div class="res-role-head">
+            <span>North East Christian University – MCA in (Data Science) [72%]</span>
+            <span class="res-role-date">2022 – 2024</span>
+          </div>
+          <div class="res-role-head">
+            <span>IG Govt. PG College Tohana | B.Com | CDLU University [61%]</span>
+            <span class="res-role-date">2018 – 2022</span>
+          </div>
+          <div class="res-role-head">
+            <span>Haryana Board of School Education – Higher Secondary 12th [71%]</span>
+            <span class="res-role-date">2016 – 2017</span>
+          </div>
+
+          <!-- Certifications -->
+          <div class="res-sec-title">Certificates</div>
+          <p>• <strong>IABAC Certified Data Analyst</strong> &bull; <strong>Certified Data Analyst</strong> (DATAMITES) &bull; <strong>Certified Data Scientist</strong> (NASSCOM)</p>
+          <p>• <strong>OpenAI ChatGPT Course</strong> (UDEMY) &bull; <strong>Introduction To DBMS</strong> (UDEMY) &bull; <strong>DBMS Uncovered</strong> (UDEMY)</p>
+          <p>• <strong>Data Structure in C++</strong> (CODING NINJAS) &bull; <strong>Introduction to C</strong> (CODING NINJAS)</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Holder -->
+  <div id="global-toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
