@@ -4,16 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dharmesh Kumar - Senior Data Analyst Resume</title>
+  
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --primary: #1e3a8a;
-      --accent: #2563eb;
-      --text: #1f2937;
-      --text-muted: #4b5563;
-      --border: #e5e7eb;
+      --text-main: #111827;
+      --text-muted: #374151;
+      --text-light: #6b7280;
+      --accent: #1d4ed8;
+      --accent-hover: #1e40af;
+      --line: #cbd5e1;
+      --bg-page: #f1f5f9;
+      --bg-sheet: #ffffff;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     * {
@@ -23,371 +30,694 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: var(--text);
-      background-color: #f3f4f6;
-      line-height: 1.5;
-      padding: 2rem 1rem;
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      line-height: 1.45;
+      padding: 1.5rem 1rem 3rem 1rem;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .toolbar {
-      max-width: 850px;
-      margin: 0 auto 1.5rem auto;
+    /* Top Sticky Action Toolbar */
+    .toolbar-container {
+      max-width: 860px;
+      margin: 0 auto 1.25rem auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-left, .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: var(--accent);
-      color: #fff;
-      padding: 0.6rem 1.2rem;
+      gap: 0.45rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.55rem 1rem;
       border-radius: 6px;
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: none;
+      border: 1px solid transparent;
       cursor: pointer;
+      transition: all 0.15s ease;
     }
 
-    .btn:hover {
-      background: #1d4ed8;
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(29, 78, 216, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: #fff;
-      color: var(--text);
-      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-main);
+      border-color: #d1d5db;
     }
 
     .btn-secondary:hover {
-      background: #f9fafb;
+      background: #f8fafc;
+      border-color: #9ca3af;
     }
 
+    /* Main Resume Sheet Container */
     .resume-sheet {
-      max-width: 850px;
+      max-width: 860px;
       margin: 0 auto;
-      background: #ffffff;
-      padding: 2.5rem 3rem;
+      background: var(--bg-sheet);
+      padding: 3.25rem 3.5rem;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      border-radius: 4px;
+      border-radius: 6px;
     }
 
+    /* Header */
     header {
-      display: flex;
-      align-items: center;
-      gap: 1.75rem;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .profile-photo {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 15%;
-      border: 3px solid var(--accent);
-      flex-shrink: 0;
-    }
-
-    .header-info {
-      flex-grow: 1;
+      text-align: center;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 1.15rem;
+      margin-bottom: 1.15rem;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.15rem;
       font-weight: 800;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.04em;
       color: #0f172a;
-      margin-bottom: 0.2rem;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
     }
 
-    .role-headline {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
+    .sub-headline {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 0.5rem;
     }
 
-    .contacts {
+    .contact-row {
       display: flex;
+      justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 0.85rem;
-      font-size: 0.84rem;
+      gap: 0.45rem 0.65rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
     }
 
-    .contacts a {
+    .contact-row a {
       color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      transition: color 0.15s ease;
     }
 
-    .contacts a:hover {
+    .contact-row a:hover {
       text-decoration: underline;
     }
 
+    .sep {
+      color: #94a3b8;
+    }
+
+    /* Section Headings */
     .section-title {
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: #0f172a;
-      border-bottom: 1.5px solid #cbd5e1;
+      border-bottom: 1.5px solid #1e293b;
       padding-bottom: 0.2rem;
       margin-top: 1.15rem;
       margin-bottom: 0.65rem;
     }
 
-    p, li {
-      font-size: 0.86rem;
-      color: #374151;
+    p {
+      font-size: 0.865rem;
+      color: var(--text-muted);
       line-height: 1.5;
     }
 
+    /* Lists */
     ul {
+      list-style-type: disc;
       padding-left: 1.25rem;
       margin-top: 0.3rem;
       display: flex;
       flex-direction: column;
-      gap: 0.3rem;
+      gap: 0.28rem;
     }
 
-    .exp-entry {
-      margin-bottom: 0.85rem;
+    li {
+      font-size: 0.865rem;
+      color: var(--text-muted);
+      line-height: 1.48;
     }
 
-    .exp-entry-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: #0f172a;
-    }
-
-    .exp-period {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: #64748b;
-    }
-
-    .exp-company {
-      font-size: 0.86rem;
-      color: var(--accent);
+    li strong, p strong {
+      color: var(--text-main);
       font-weight: 600;
     }
 
-    .skill-category {
-      margin-bottom: 0.3rem;
-      font-size: 0.86rem;
+    /* Work Experience & Project Item */
+    .entry-block {
+      margin-bottom: 0.95rem;
+      page-break-inside: avoid;
     }
 
-    .skill-category strong {
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .entry-title {
+      font-weight: 700;
       color: #0f172a;
+    }
+
+    .entry-company {
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .entry-date {
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--text-light);
+      white-space: nowrap;
+    }
+
+    .entry-tools {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      padding-left: 1.25rem;
+    }
+
+    .entry-tools strong {
+      color: #0f172a;
+    }
+
+    .entry-tools a, .entry-title a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .entry-tools a:hover, .entry-title a:hover {
+      text-decoration: underline;
+    }
+
+    /* Education Table */
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.4rem;
+      font-size: 0.865rem;
+    }
+
+    .edu-table th {
+      text-align: left;
+      background: #f8fafc;
+      color: #0f172a;
+      font-weight: 700;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #e2e8f0;
+      font-size: 0.84rem;
+    }
+
+    .edu-table td {
+      padding: 0.45rem 0.75rem;
+      border: 1px solid #e2e8f0;
+      color: var(--text-muted);
+    }
+
+    .edu-table tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    /* Certifications 2-Column Grid */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.35rem 1.5rem;
+      margin-top: 0.35rem;
+    }
+
+    .cert-item {
+      font-size: 0.865rem;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 1.15rem;
+      line-height: 1.45;
+    }
+
+    .cert-item::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #0f172a;
+      font-weight: bold;
+    }
+
+    /* Soft Skills 3-Column Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.35rem 1.5rem;
+      margin-top: 0.35rem;
+    }
+
+    .skill-item {
+      font-size: 0.865rem;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 1.15rem;
+    }
+
+    .skill-item::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #0f172a;
+      font-weight: bold;
+    }
+
+    /* Toast Notification */
+    .toast-popup {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.25s ease;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .toast-popup.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===================================================================
+       PRINT STYLES: OPTIMIZED FOR A4 / LETTER PDF GENERATION
+       =================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 12mm 15mm;
     }
 
     @media print {
       body {
-        background: #ffffff;
-        padding: 0;
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
       }
-      .toolbar {
-        display: none;
+
+      .toolbar-container, .toast-popup {
+        display: none !important;
       }
+
       .resume-sheet {
-        box-shadow: none;
-        padding: 0;
-        max-width: 100%;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+      }
+
+      a {
+        color: #000000 !important;
+        text-decoration: none !important;
+      }
+
+      header {
+        border-bottom: 2px solid #000000 !important;
+      }
+
+      .section-title {
+        border-bottom: 1.5px solid #000000 !important;
+      }
+
+      .entry-block {
+        page-break-inside: avoid;
+      }
+
+      .edu-table th {
+        background: #f1f5f9 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="toolbar">
-    <a href="index.html" class="btn btn-secondary">← Back to Portfolio</a>
-    <button class="btn" onclick="window.print()">
-      🖨️ Print / Save as PDF
-    </button>
+  <!-- Floating / Top Action Toolbar -->
+  <div class="toolbar-container">
+    <div class="toolbar-left">
+      <a href="index.html" class="btn btn-secondary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        Back to Portfolio
+      </a>
+      <button onclick="copyEmail()" class="btn btn-secondary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy Email
+      </button>
+    </div>
+
+    <div class="toolbar-right">
+      <button onclick="window.print()" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        Print / Save as PDF
+      </button>
+    </div>
   </div>
 
-  <div class="resume-sheet">
+  <!-- Printable Resume Paper -->
+  <main class="resume-sheet">
+    
+    <!-- Header -->
     <header>
-      <img src="profile.png" alt="Dharmesh Kumar" class="profile-photo">
-      <div class="header-info">
-        <h1>DHARMESH KUMAR</h1>
-        <div class="role-headline">Data & Reporting Analyst | Power BI, Tableau, SQL, Python | Business & Financial Analytics</div>
-        <div class="contacts">
-          <span>Bangalore, Karnatak, India</span>
-          <span>+91-7015139561</span>
-          <span>dharmeshkumar2702@gmail.com</span>
-          <span><a href="https://www.linkedin.com/in/dharmesh-kumar-293a89235/" target="_blank">LinkedIn</a></span>
-          <span><a href="https://github.com/Dharmeshkumar2327" target="_blank">GitHub</a></span>
-        </div>
+      <h1>DHARMESH KUMAR</h1>
+      <div class="sub-headline">Senior Data Analyst | Power BI · Tableau · SQL · Python | Business & Financial Analytics</div>
+      <div class="contact-row">
+        <span>Bengaluru, Karnataka, India</span>
+        <span class="sep">|</span>
+        <a href="tel:+917015139561">+91-7015139561</a>
+        <span class="sep">|</span>
+        <a href="mailto:dharmeshkumar2702@gmail.com">dharmeshkumar2702@gmail.com</a>
+        <span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/dharmesh-kumar-293a89235/" target="_blank">LinkedIn</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/Dharmeshkumar2327" target="_blank">GitHub</a>
+        <span class="sep">|</span>
+        <a href="index.html">Portfolio</a>
       </div>
     </header>
 
-    <div class="section-title">Professional Summary</div>
-    <p>
-      Data Analyst with 4+ years of hands-on experience in SQL, Python, Excel, Power BI, and Tableau. Certified Data Analyst with strong expertise in data cleaning, analysis, visualization, and dashboard development. Currently contributing to Quad AI as Sr. Data Analyst and RUBIXE as Data Analyst Consultant. Former Teaching Assistant at Coding Ninjas, with strong problem-solving, communication, and collaboration skills. Passionate about leveraging data to drive informed decision-making, optimize processes, and support business growth.
-    </p>
+    <!-- Professional Summary -->
+    <section>
+      <div class="section-title">PROFESSIONAL SUMMARY</div>
+      <p>
+        Data Analyst with 4+ years of experience turning raw data into dashboards, reports and insights for business decisions, using SQL, Python, Power BI, Tableau and Excel. Currently Senior Data Analyst at Quad AI, Bengaluru, where I also deliver technical training in Python and data analytics. IABAC and DATAMITES certified Data Analyst and NASSCOM Certified Data Scientist, completing an M.Tech in Data Science. Strong in data cleaning, exploratory analysis, KPI reporting, predictive modelling and presenting findings to stakeholders.
+      </p>
+    </section>
 
-    <div class="section-title">Technical Skills</div>
-    <div class="skill-category"><strong>Data Analysis & Visualization:</strong> Power BI, Tableau, Excel, Exploratory Data Analysis (EDA)</div>
-    <div class="skill-category"><strong>Python Libraries:</strong> Pandas, NumPy, SciPy, Matplotlib, Seaborn, Scikit-learn</div>
-    <div class="skill-category"><strong>Database Management:</strong> SQL (PostgreSQL, T-SQL, MySQL; Joins, Subqueries, CTEs, Window Functions, Views, Indexing)</div>
-    <div class="skill-category"><strong>Machine Learning:</strong> Classification, Regression, Clustering (K-Means, PCA)</div>
-    <div class="skill-category"><strong>Data Cleaning & Processing:</strong> Data Preprocessing, Handling Missing Data, Outlier Detection</div>
-    <div class="skill-category"><strong>Excel Functions:</strong> VLOOKUP, INDEX-MATCH, Pivot Tables, Conditional Formatting</div>
-    <div class="skill-category"><strong>Tools & Platforms:</strong> Git, GitHub, Google Sheets, PowerPoint, Jupyter Notebook</div>
-
-    <div class="section-title">Core Competencies</div>
-    <p>• <strong>Business Intelligence & Analytics:</strong> Dashboard development, KPI tracking, executive reporting</p>
-    <p>• <strong>Predictive Analytics:</strong> Customer churn modeling, trend forecasting, risk assessment</p>
-    <p>• <strong>Data-Driven Decision-Making:</strong> Statistical analysis, hypothesis testing, A/B testing</p>
-    <p>• <strong>Business Process Optimization:</strong> Workflow automation, data validation, efficiency improvement</p>
-    <p>• <strong>Stakeholder Management:</strong> Cross-functional collaboration, training delivery, client relations</p>
-
-    <div class="section-title">Work Experience</div>
-
-    <div class="exp-entry">
-      <div class="exp-entry-header">
-        <div><strong>Sr. Data Analyst</strong> – <span class="exp-company">Quad AI</span></div>
-        <div class="exp-period">Dec 2025 – Present</div>
-      </div>
+    <!-- Technical Skills -->
+    <section>
+      <div class="section-title">TECHNICAL SKILLS</div>
       <ul>
-        <li>Creating interactive dashboards and visual reports for business insights and decision-making.</li>
-        <li>Performing data cleaning, transformation, and analysis using Python and SQL.</li>
-        <li>Developing and optimizing SQL queries for extracting and managing large production datasets.</li>
-        <li>Generating business reports and presenting analytical findings to support organizational goals.</li>
-        <li>Assisting in Business Intelligence (BI) solutions and data-driven strategy development.</li>
+        <li><strong>BI & Visualization:</strong> Power BI, Tableau, Excel (Pivot Tables, VLOOKUP, INDEX-MATCH, Conditional Formatting), Google Sheets</li>
+        <li><strong>Languages & Databases:</strong> SQL (PostgreSQL – Joins, Subqueries, CTEs, Window Functions, Views, Indexing), Python</li>
+        <li><strong>Python Libraries:</strong> Pandas, NumPy, SciPy, Matplotlib, Seaborn, Scikit-learn</li>
+        <li><strong>Analytics & ML:</strong> EDA, Data Cleaning & Preprocessing, Missing Data Handling, Outlier Detection, Classification, Regression, Clustering (K-Means, PCA), Deep Learning for churn prediction</li>
+        <li><strong>AI & LLM:</strong> Multi-agent LLM data analysis (Data Pilot AI)</li>
+        <li><strong>Tools:</strong> Git, GitHub, Jupyter Notebook, PowerPoint</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="exp-entry">
-      <div class="exp-entry-header">
-        <div><strong>Data Analyst Consultant</strong> – <span class="exp-company">RUBIXE AI SOLUTIONS</span></div>
-        <div class="exp-period">Dec 2024 – Dec 2025</div>
-      </div>
+    <!-- Core Competencies -->
+    <section>
+      <div class="section-title">CORE COMPETENCIES</div>
       <ul>
-        <li>Working on Business Intelligence (BI) projects using Power BI and Tableau.</li>
-        <li>Analyzing large datasets and creating interactive dashboards for decision-making.</li>
-        <li>Developing SQL queries for data extraction, transformation, and reporting.</li>
-        <li>Utilizing Python (Pandas, Matplotlib) for data cleaning and visualization.</li>
+        <li><strong>Business Intelligence & Analytics:</strong> dashboard development, KPI tracking, executive reporting</li>
+        <li><strong>Predictive Analytics:</strong> customer churn modelling, trend forecasting</li>
+        <li><strong>Data-Driven Decision-Making:</strong> statistical analysis, hypothesis testing</li>
+        <li><strong>Process Improvement:</strong> data validation, reporting automation</li>
+        <li><strong>Stakeholder Management:</strong> cross-functional collaboration, training delivery, presenting insights</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="exp-entry">
-      <div class="exp-entry-header">
-        <div><strong>Data Analyst</strong> – <span class="exp-company">ARHAM FOUNDATION</span></div>
-        <div class="exp-period">Jan 2024 – Dec 2024</div>
+    <!-- Work Experience -->
+    <section>
+      <div class="section-title">WORK EXPERIENCE</div>
+
+      <!-- Experience 1: Quad AI -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div><span class="entry-title">Senior Data Analyst</span> | <span class="entry-company">Quad AI, Bengaluru</span></div>
+          <span class="entry-date">Dec 2025 – Present</span>
+        </div>
+        <ul>
+          <li>Build interactive Power BI and Tableau dashboards and visual reports that support business insights and decisions.</li>
+          <li>Clean, transform and analyze large datasets using Python and SQL.</li>
+          <li>Write and optimize SQL queries to extract and manage large datasets.</li>
+          <li>Present analytical findings and BI recommendations to stakeholders and support data-driven strategy.</li>
+          <li>Deliver technical training in Python and data analytics to BTech students.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Analyzed business and operational datasets to deliver insights that improved decision-making and performance.</li>
-        <li>Created interactive dashboards and reports using Power BI / Tableau, enabling clear visualization of KPIs and trends.</li>
-        <li>Performed data cleaning, transformation, and exploratory analysis using Python (Pandas, NumPy, Matplotlib).</li>
-        <li>Developed efficient SQL queries for data extraction, validation, and reporting from multiple data sources.</li>
-      </ul>
-    </div>
 
-    <div class="exp-entry">
-      <div class="exp-entry-header">
-        <div><strong>Data Analyst</strong> – <span class="exp-company">SRI CHAITANYA GROUP</span></div>
-        <div class="exp-period">Jul 2022 – Dec 2023</div>
+      <!-- Experience 2: RUBIXE AI Solutions -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div><span class="entry-title">Data Analyst Consultant</span> | <span class="entry-company">RUBIXE AI Solutions</span></div>
+          <span class="entry-date">Dec 2024 – Dec 2025</span>
+        </div>
+        <ul>
+          <li>Delivered BI projects with Power BI and Tableau, including a Job Market Analysis Dashboard on salary trends, locations and industry demand.</li>
+          <li>Analyzed healthcare data with 30+ SQL queries for patient demographics and admission trends.</li>
+          <li>Developed SQL queries for data extraction, transformation and reporting.</li>
+          <li>Used Python (Pandas, Matplotlib) for data cleaning and visualization.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Built interactive dashboards and performance reports using Power BI / Tableau.</li>
-        <li>Cleaned, transformed, and validated data using Python (Pandas, NumPy).</li>
-        <li>Developed and optimized SQL queries for data extraction, reporting, and automation.</li>
-        <li>Identified trends, patterns, and anomalies through exploratory data analysis (EDA).</li>
-      </ul>
-    </div>
 
-    <div class="section-title">Projects</div>
-
-    <div class="exp-entry">
-      <div class="exp-entry-header">
-        <div><strong>Purchase Pattern Analytics</strong> | <span class="exp-company">QUAD AI</span> <span style="color:#10b981;">(Accuracy: 97%)</span></div>
-        <div class="exp-period">Dec 2025 – Feb 2026</div>
+      <!-- Experience 3: Arham Foundation -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div><span class="entry-title">Data Analyst</span> | <span class="entry-company">Arham Foundation</span></div>
+          <span class="entry-date">Jan 2024 – Dec 2024</span>
+        </div>
+        <ul>
+          <li>Analyzed business and operational datasets to deliver insights that improved decision-making and performance.</li>
+          <li>Built Power BI and Tableau dashboards to track KPIs and trends.</li>
+          <li>Cleaned and explored data with Python (Pandas, NumPy, Matplotlib).</li>
+          <li>Wrote SQL queries for extraction, validation and reporting across multiple data sources.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Performed EDA to identify missing values, outliers, and key purchase trends; cleaned and transformed data for analysis.</li>
-        <li>Built visualizations to display item frequency, association rules, and product relationships using Python and Matplotlib.</li>
-        <li>Delivered actionable insights to support sales strategies and improve customer experience through targeted recommendations.</li>
-        <li><strong>Technologies:</strong> Python (Pandas, Matplotlib, Seaborn), SQL</li>
-      </ul>
-    </div>
 
-    <div class="exp-entry">
-      <div class="exp-entry-header">
-        <div><strong>Medical Data History Analysis</strong> | <span class="exp-company">RUBIXE AI SOLUTIONS</span> <span style="color:#10b981;">(Accuracy: 97%)</span></div>
-        <div class="exp-period">Jul 2025 – Sep 2025</div>
+      <!-- Experience 4: Sri Chaitanya Group -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div><span class="entry-title">Data Analyst</span> | <span class="entry-company">Sri Chaitanya Group</span></div>
+          <span class="entry-date">Jul 2022 – Dec 2023</span>
+        </div>
+        <ul>
+          <li>Built Power BI and Tableau dashboards and performance reports.</li>
+          <li>Cleaned, transformed and validated data using Python (Pandas, NumPy).</li>
+          <li>Developed and optimized SQL queries for extraction, reporting and automation.</li>
+          <li>Identified trends, patterns and anomalies through exploratory data analysis.</li>
+        </ul>
       </div>
-      <ul>
-        <li>Analyzed real-world healthcare data using 30+ SQL queries across patients, admissions, and doctors' tables.</li>
-        <li>Performed data cleaning, aggregation, and filtering to derive insights on patient demographics, diagnoses, and admission trends.</li>
-        <li>Implemented BMI calculation, NULL handling, and data grouping for reporting.</li>
-        <li><strong>Technologies:</strong> SQL (PostgreSQL), Advance Excel</li>
-      </ul>
-    </div>
+    </section>
 
-    <div class="exp-entry">
-      <div class="exp-entry-header">
-        <div><strong>Job Market Analysis Dashboard</strong> | <span class="exp-company">RUBIXE AI SOLUTIONS</span> <span style="color:#10b981;">(Accuracy: 98%)</span></div>
-        <div class="exp-period">Feb 2025 – Mar 2025</div>
+    <!-- Projects -->
+    <section>
+      <div class="section-title">PROJECTS</div>
+
+      <!-- Project 1 -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Customer Churn Prediction with Deep Learning</span> | <span class="entry-company">Quad AI</span> | <a href="https://github.com/Dharmeshkumar2327/Deep_Learning_Customer_Churn_Intelligence" target="_blank">GitHub</a>
+          </div>
+          <span class="entry-date">Sep 2026 – Oct 2026</span>
+        </div>
+        <ul>
+          <li>Built a deep learning model to predict customer churn, improved with entity embeddings and hyperparameter tuning.</li>
+          <li>Presented churn drivers and at-risk segments in an interactive Tableau dashboard for senior stakeholders.</li>
+        </ul>
+        <div class="entry-tools"><strong>Tools:</strong> Python (Pandas, NumPy, Scikit-learn, deep learning), Tableau</div>
       </div>
-      <ul>
-        <li>Created an interactive dashboard for job market trends using Power BI, SQL, Python, and Excel.</li>
-        <li>Analyzed salary insights, job locations, and industry demand.</li>
-        <li><strong>Technologies:</strong> Power BI, SQL, Python (Pandas, Matplotlib), Excel</li>
-      </ul>
-    </div>
 
-    <div class="exp-entry">
-      <div class="exp-entry-header">
-        <div><strong>Customer Segmentation Analysis with Machine Learning</strong></div>
-        <div class="exp-period">Sep 2024 – Dec 2024</div>
+      <!-- Project 2 -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Data Pilot AI – Multi-Agent LLM Data Analyst</span> | <span class="entry-company">Quad AI</span> | <a href="https://github.com/Dharmeshkumar2327/LLM_Advance_Datapilot_AI" target="_blank">GitHub</a>
+          </div>
+          <span class="entry-date">Aug 2026 – Sep 2026</span>
+        </div>
+        <ul>
+          <li>Built a Python application where LLM agents analyze datasets and answer analytical questions in plain language.</li>
+        </ul>
+        <div class="entry-tools"><strong>Tools:</strong> Python, LLM APIs, Pandas</div>
       </div>
-      <ul>
-        <li>Performed customer segmentation to identify purchasing patterns and group customers based on behavior.</li>
-        <li>Applied K-Means Clustering and PCA for dimensionality reduction and cluster formation.</li>
-        <li>Provided insights for targeted marketing and personalized customer engagement strategies.</li>
-        <li><strong>Technologies:</strong> Python (Pandas, NumPy, Scikit-learn, Matplotlib), Excel</li>
-      </ul>
-    </div>
 
-    <div class="section-title">Soft Skills</div>
-    <p>• Leadership &bull; Problem-Solving &bull; Communication &bull; Team Collaboration &bull; Adaptability &bull; Decision-Making</p>
+      <!-- Project 3 -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Foodservice DB Analytics (SQL Server, T-SQL)</span> | <span class="entry-company">RUBIXE AI Solutions</span> | <a href="https://github.com/Dharmeshkumar2327/foodservicedb-analytics" target="_blank">GitHub</a>
+          </div>
+          <span class="entry-date">Feb 2025 – Mar 2026</span>
+        </div>
+        <ul>
+          <li>Designed a normalized SQL Server database with primary/foreign keys, indexes, stored procedures, and data quality checks.</li>
+          <li>Wrote T-SQL queries analyzing cuisines, consumer demographics, and ratings to uncover customer-preference and service-performance insights.</li>
+        </ul>
+        <div class="entry-tools"><strong>Tools:</strong> SQL Server, T-SQL, SSMS</div>
+      </div>
 
-    <div class="section-title">Education</div>
-    <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
-      <div><strong>North East Christian University</strong> – Masters of Technology in (Data Science) [70%]</div>
-      <div style="color: #64748b; font-size: 0.82rem;">2024 – 2026</div>
-    </div>
-    <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
-      <div><strong>North East Christian University</strong> – Masters of Computer Application in (Data Science) [72%]</div>
-      <div style="color: #64748b; font-size: 0.82rem;">2022 – 2024</div>
-    </div>
-    <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
-      <div><strong>IG Govt. Pg College Tohana</strong> | Bachelor of Commerce | CDLU University [61%]</div>
-      <div style="color: #64748b; font-size: 0.82rem;">2018 – 2022</div>
-    </div>
-    <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
-      <div><strong>Haryana Board of School Education</strong> – Higher Secondary Education 12th [71%]</div>
-      <div style="color: #64748b; font-size: 0.82rem;">2016 – 2017</div>
-    </div>
+      <!-- Project 4 -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Heart Attack Risk Prediction</span> | <span class="entry-company">RUBIXE AI Solutions</span> | <a href="https://github.com/Dharmeshkumar2327/heart-attack-prediction-machine-learning" target="_blank">GitHub</a>
+          </div>
+          <span class="entry-date">Jan 2026 – Feb 2026</span>
+        </div>
+        <ul>
+          <li>Built an end-to-end ML pipeline on 8,763 patient records covering data cleaning, EDA, class balancing, and 5 feature-selection methods (Chi², Mutual Info, Lasso, PCA, RFE).</li>
+          <li>Compared 7+ classifiers and ensembles (Stacking, Voting) and tuned a Random Forest with GridSearchCV and 5-fold cross-validation, using a leakage-safe validation setup.</li>
+        </ul>
+        <div class="entry-tools"><strong>Tools:</strong> Python (Pandas, NumPy, scikit-learn, imbalanced-learn, Matplotlib, Seaborn), Jupyter</div>
+      </div>
 
-    <div class="section-title">Certificates</div>
-    <p>• <strong>IABAC Certified Data Analyst</strong> &bull; <strong>Certified Data Analyst</strong> (DATAMITES) &bull; <strong>Certified Data Scientist</strong> (NASSCOM)</p>
-    <p>• <strong>OpenAI ChatGPT Course</strong> (UDEMY) &bull; <strong>Introduction To DBMS</strong> (UDEMY) &bull; <strong>DBMS Uncovered</strong> (UDEMY)</p>
-    <p>• <strong>Data Structure in C++</strong> (CODING NINJAS) &bull; <strong>Introduction to C</strong> (CODING NINJAS)</p>
-  </div>
+      <!-- Project 5 -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Medical Data History Analysis</span> | <span class="entry-company">RUBIXE AI Solutions</span>
+          </div>
+          <span class="entry-date">Jul 2025 – Sep 2025</span>
+        </div>
+        <ul>
+          <li>Wrote 30+ SQL queries across patient, admission and doctor tables to analyze demographics, diagnoses and admission trends.</li>
+          <li>Applied aggregation, filtering, NULL handling, grouping and BMI calculation for reporting.</li>
+        </ul>
+        <div class="entry-tools"><strong>Tools:</strong> PostgreSQL, Advanced Excel</div>
+      </div>
 
+      <!-- Project 6 -->
+      <div class="entry-block">
+        <div class="entry-header">
+          <div>
+            <span class="entry-title">Customer Segmentation with Machine Learning</span> | <span class="entry-company">Arham Foundation</span> | <a href="https://github.com/Dharmeshkumar2327/customer-segmentation-clustering" target="_blank">GitHub</a>
+          </div>
+          <span class="entry-date">Sep 2024 – Dec 2024</span>
+        </div>
+        <ul>
+          <li>Grouped customers by purchasing behavior using K-Means clustering and PCA.</li>
+          <li>Provided insights for targeted marketing and personalized customer engagement.</li>
+        </ul>
+        <div class="entry-tools"><strong>Tools:</strong> Python (Pandas, NumPy, Scikit-learn, Matplotlib), Excel</div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <div class="section-title">EDUCATION</div>
+      <table class="edu-table">
+        <thead>
+          <tr>
+            <th>Degree</th>
+            <th>Institution</th>
+            <th>Score</th>
+            <th>Years</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>M.Tech, Data Science</strong></td>
+            <td>North East Christian University</td>
+            <td>70%</td>
+            <td>2024 – 2026</td>
+          </tr>
+          <tr>
+            <td><strong>MCA, Data Science</strong></td>
+            <td>North East Christian University</td>
+            <td>72%</td>
+            <td>2022 – 2024</td>
+          </tr>
+          <tr>
+            <td><strong>B.Com</strong></td>
+            <td>IG Govt. PG College TOHANA (CDLU University)</td>
+            <td>61%</td>
+            <td>2018 – 2022</td>
+          </tr>
+          <tr>
+            <td><strong>Class 12</strong></td>
+            <td>Haryana Board of School Education</td>
+            <td>71%</td>
+            <td>2016 – 2017</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+      <div class="section-title">CERTIFICATIONS</div>
+      <div class="cert-grid">
+        <div>
+          <div class="cert-item">Certified Data Analyst – IABAC</div>
+          <div class="cert-item">Certified Data Analyst – DATAMITES</div>
+          <div class="cert-item">Certified Data Scientist – NASSCOM</div>
+        </div>
+        <div>
+          <div class="cert-item">Introduction to DBMS; DBMS Uncovered; OpenAI ChatGPT Course – Udemy</div>
+          <div class="cert-item">Data Structures in C++; Introduction to C – Coding Ninjas</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soft Skills -->
+    <section>
+      <div class="section-title">SOFT SKILLS</div>
+      <div class="skills-grid">
+        <div class="skill-item">Leadership</div>
+        <div class="skill-item">Problem-Solving</div>
+        <div class="skill-item">Communication</div>
+        <div class="skill-item">Team Collaboration</div>
+        <div class="skill-item">Adaptability</div>
+        <div class="skill-item">Decision-Making</div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast-popup">Email copied to clipboard!</div>
+
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText('dharmeshkumar2702@gmail.com').then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      });
+    }
+  </script>
 </body>
 </html>
