@@ -58,9 +58,10 @@
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#sandbox" class="nav-link">BI Simulator</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects (<span style="color:var(--accent-cyan); font-weight:700;">16</span>)</a></li>
+            <li><a href="#projects" class="nav-link">Projects (<span style="color:var(--accent-cyan); font-weight:700;">18</span>)</a></li>
+            <li><a href="#certificates" class="nav-link">Certificates (<span style="color:var(--accent-cyan); font-weight:700;">11</span>)</a></li>
             <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#education" class="nav-link">Credentials</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
@@ -212,7 +213,7 @@
             <div class="stat-label">Years Hands-On Analytics</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">16+</div>
+            <div class="stat-number">18+</div>
             <div class="stat-label">GitHub & Production Repos</div>
           </div>
           <div class="stat-item">
@@ -220,8 +221,8 @@
             <div class="stat-label">Model & Dashboard Accuracy</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">8x</div>
-            <div class="stat-label">Certified (IABAC, NASSCOM, etc.)</div>
+            <div class="stat-number">11x</div>
+            <div class="stat-label">Verified Certifications</div>
           </div>
         </div>
 
@@ -548,22 +549,85 @@
           <span class="section-badge">Complete Portfolio</span>
           <h2 class="section-title">All Featured Projects & Case Studies</h2>
           <p class="section-subtitle">
-            Explore 16 industry and open-source projects spanning executive Power BI & Tableau dashboards, advanced PostgreSQL schemas, machine learning models, and Python automation.
+            Explore 18 industry and open-source projects spanning executive Power BI & Tableau dashboards, analytics engineering (dbt & DuckDB), advanced PostgreSQL schemas, machine learning models, and Python automation.
           </p>
         </div>
 
         <!-- Filter Buttons -->
         <div class="projects-filter-bar">
-          <button class="proj-filter-btn active" data-filter="all">All Projects (16)</button>
-          <button class="proj-filter-btn" data-filter="industry">Industry Experience (4)</button>
-          <button class="proj-filter-btn" data-filter="bi">Power BI & Tableau (6)</button>
-          <button class="proj-filter-btn" data-filter="sql">SQL & Databases (3)</button>
-          <button class="proj-filter-btn" data-filter="ml">Machine Learning & AI (5)</button>
-          <button class="proj-filter-btn" data-filter="python">Python & Automation (4)</button>
+          <button class="proj-filter-btn active" data-filter="all">All Projects (18)</button>
+          <button class="proj-filter-btn" data-filter="industry">Industry Experience (5)</button>
+          <button class="proj-filter-btn" data-filter="bi">Power BI & Tableau (7)</button>
+          <button class="proj-filter-btn" data-filter="sql">SQL & Data Eng (5)</button>
+          <button class="proj-filter-btn" data-filter="ml">Machine Learning & AI (6)</button>
+          <button class="proj-filter-btn" data-filter="python">Python & Analytics (6)</button>
         </div>
 
         <!-- Projects Responsive Grid -->
         <div class="projects-grid">
+
+          <!-- 1. ShopFlow Analytics (Featured Live Project) -->
+          <article class="project-card" data-category="bi sql python industry">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Analytics Engineering</span>
+                <span class="project-timeline">2026 &bull; Production</span>
+              </div>
+              <span class="badge-live"><span class="badge-live-dot"></span>LIVE APP</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">ShopFlow Analytics: E-Commerce Data Platform</h3>
+              <p class="project-desc">
+                Production-grade analytics engineering platform for Indian e-commerce. Built with dbt + DuckDB (28 dimensional models, 140+ automated data tests, GitHub Actions CI/CD) powering an interactive Streamlit app with revenue marts, RFM customer segmentation, CAC/LTV cohorts, and delivery intelligence.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">dbt Core</span>
+                <span class="project-tag">DuckDB</span>
+                <span class="project-tag">Streamlit Live</span>
+                <span class="project-tag">PostgreSQL / SQL</span>
+                <span class="project-tag">CI/CD Actions</span>
+                <span class="project-tag">RFM & Cohorts</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://shopflow-analytics-nh2a9ucu75xyequqmv94cc.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-live btn-sm">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  Live App
+                </a>
+                <button class="btn btn-primary btn-sm" data-project-trigger="shopflow-analytics">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327/shopflow-analytics" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. SkillGraph India (Featured Analytics & ML Engine) -->
+          <article class="project-card" data-category="ml python sql bi">
+            <div class="project-card-header">
+              <div class="project-meta-top">
+                <span class="project-client-badge">Market Intelligence</span>
+                <span class="project-timeline">2026 &bull; Big Data</span>
+              </div>
+              <span class="project-accuracy-badge">✓ 60,000+ Jobs Analyzed</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">SkillGraph India: Job Market Intelligence</h3>
+              <p class="project-desc">
+                Data-driven labor market intelligence platform analyzing 60,000+ postings across Indian tech hubs. Employs Python, PostgreSQL, Power BI, and NLP/ML clustering to uncover in-demand skill combinations, salary premiums, and algorithmic career pathway transitions.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python (Pandas)</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">NLP & ML</span>
+                <span class="project-tag">FP-Growth Mining</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="skillgraph-india">Deep Dive</button>
+                <a href="https://github.com/Dharmeshkumar2327/skillgraph-india" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
 
           <!-- 1. Purchase Pattern Analytics -->
           <article class="project-card" data-category="industry python sql">
@@ -1133,15 +1197,582 @@
     </section>
 
     <!-- ===================================================================
-         EDUCATION & CERTIFICATIONS (ALL 8 CERTIFICATES)
+         CERTIFICATES & LICENSES (ALL 11 VERIFIED CERTIFICATES AS IMAGES)
+         =================================================================== -->
+    <section id="certificates" class="certificates-section" style="padding: 5rem 0; background: rgba(13, 20, 36, 0.45); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Verified Credentials</span>
+          <h2 class="section-title">Certificates & Licenses</h2>
+          <p class="section-subtitle">
+            All 11 official certificates earned by Dharmesh Kumar across Data Science, Business Analytics, SQL & Databases, and Algorithms. Click any certificate to open in full high resolution with instant online verification.
+          </p>
+        </div>
+
+        <!-- Filter Buttons for Certificates -->
+        <div class="certificates-filter-bar" style="display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap; margin-bottom: 2.5rem;">
+          <button class="cert-filter-btn proj-filter-btn active" data-cert-filter="all">All Certificates (11)</button>
+          <button class="cert-filter-btn proj-filter-btn" data-cert-filter="analytics">Data & Analytics (4)</button>
+          <button class="cert-filter-btn proj-filter-btn" data-cert-filter="coding">Coding & Algorithms (5)</button>
+          <button class="cert-filter-btn proj-filter-btn" data-cert-filter="ai-db">AI & Databases (2)</button>
+        </div>
+
+        <!-- Visual Certificates Grid -->
+        <div class="certificates-grid">
+
+          <!-- 1. IABAC Certified Data Analyst -->
+          <article class="cert-card-visual" data-category="analytics">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/iabac_certified_data_analyst.png" 
+                 data-cert-title="IABAC Certified Data Analyst" 
+                 data-cert-issuer="International Association of Business Analytics Certifications (IABAC)" 
+                 data-cert-verify="https://iabac.org/verify">
+              <img class="cert-thumb-img" src="assets/certificates/iabac_certified_data_analyst.png" alt="IABAC Certified Data Analyst - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">Global Standard</span>
+                <span class="cert-date">March 2025</span>
+              </div>
+              <h4 class="cert-card-title">Certified Data Analyst</h4>
+              <div class="cert-card-issuer">IABAC (International Association of Business Analytics Certifications)</div>
+              <div class="cert-meta-info">
+                <span>Cert No: <code>IAB1120175383</code></span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/iabac_certified_data_analyst.png" 
+                        data-cert-title="IABAC Certified Data Analyst" 
+                        data-cert-issuer="International Association of Business Analytics Certifications (IABAC)" 
+                        data-cert-verify="https://iabac.org/verify">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="https://iabac.org/verify" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Verify Online ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. NASSCOM Certified Data Scientist -->
+          <article class="cert-card-visual" data-category="analytics">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/nasscom_certified_data_scientist.png" 
+                 data-cert-title="Certified Data Scientist (Gold Category)" 
+                 data-cert-issuer="NASSCOM (FutureSkills Prime) & Ministry of Electronics and IT, Govt. of India" 
+                 data-cert-verify="https://futureskillsprime.in/verify">
+              <img class="cert-thumb-img" src="assets/certificates/nasscom_certified_data_scientist.png" alt="NASSCOM Certified Data Scientist - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">Gold Category &bull; 97% Score</span>
+                <span class="cert-date">Govt. of India</span>
+              </div>
+              <h4 class="cert-card-title">Certified Data Scientist</h4>
+              <div class="cert-card-issuer">NASSCOM FutureSkills Prime & IT-ITeS SSC</div>
+              <div class="cert-meta-info">
+                <span>Candidate ID: <code>149009745</code></span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/nasscom_certified_data_scientist.png" 
+                        data-cert-title="Certified Data Scientist (Gold Category)" 
+                        data-cert-issuer="NASSCOM (FutureSkills Prime) & IT-ITeS SSC" 
+                        data-cert-verify="https://futureskillsprime.in/verify">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="https://futureskillsprime.in/verify" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Verify Online ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. DATAMITES Certified Data Analyst -->
+          <article class="cert-card-visual" data-category="analytics">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/datamites_certified_data_analyst.jpg" 
+                 data-cert-title="Certified Data Analyst" 
+                 data-cert-issuer="DataMites Global Training Institute" 
+                 data-cert-verify="https://datamites.com/verify">
+              <img class="cert-thumb-img" src="assets/certificates/datamites_certified_data_analyst.jpg" alt="DataMites Certified Data Analyst - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Accredited Institute</span>
+                <span class="cert-date">Professional</span>
+              </div>
+              <h4 class="cert-card-title">Certified Data Analyst</h4>
+              <div class="cert-card-issuer">DataMites Global Training Institute</div>
+              <div class="cert-meta-info">
+                <span>Cert No: <code>01250319486119</code></span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/datamites_certified_data_analyst.jpg" 
+                        data-cert-title="Certified Data Analyst" 
+                        data-cert-issuer="DataMites Global Training Institute" 
+                        data-cert-verify="https://datamites.com/verify">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="https://datamites.com/verify" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Verify Online ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Coding Ninjas - DSA in C++ (Excellence Award) -->
+          <article class="cert-card-visual" data-category="coding">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/coding_ninjas_dsa_c_excellence.png" 
+                 data-cert-title="Certificate of Excellence: Data Structures in C++" 
+                 data-cert-issuer="Coding Ninjas (Excellence Award - Top Performer)" 
+                 data-cert-verify="https://ninjasfiles.s3.amazonaws.com/certificate114251f0b14e81ef811c62985be0b9bf3b4695.pdf">
+              <img class="cert-thumb-img" src="assets/certificates/coding_ninjas_dsa_c_excellence.png" alt="Coding Ninjas DSA in C++ Excellence - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">Excellence Award &bull; 90%+ Score</span>
+                <span class="cert-date">Algorithms</span>
+              </div>
+              <h4 class="cert-card-title">Data Structures in C++</h4>
+              <div class="cert-card-issuer">Coding Ninjas &bull; Excellence Certification</div>
+              <div class="cert-meta-info">
+                <span>Verify ID: <code>1f0b14e81ef811c6</code></span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/coding_ninjas_dsa_c_excellence.png" 
+                        data-cert-title="Certificate of Excellence: Data Structures in C++" 
+                        data-cert-issuer="Coding Ninjas (Excellence Award)" 
+                        data-cert-verify="https://ninjasfiles.s3.amazonaws.com/certificate114251f0b14e81ef811c62985be0b9bf3b4695.pdf">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="https://ninjasfiles.s3.amazonaws.com/certificate114251f0b14e81ef811c62985be0b9bf3b4695.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Verify PDF ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Coding Ninjas - DSA in C++ (Completion) -->
+          <article class="cert-card-visual" data-category="coding">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/coding_ninjas_dsa_c_completion.png" 
+                 data-cert-title="Certificate of Course Completion: Data Structures in C++" 
+                 data-cert-issuer="Coding Ninjas" 
+                 data-cert-verify="https://ninjasfiles.s3.amazonaws.com/certificate114259a9c15e31d87bc6c8ea2cf4b97779fdf.pdf">
+              <img class="cert-thumb-img" src="assets/certificates/coding_ninjas_dsa_c_completion.png" alt="Coding Ninjas DSA Completion - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border-color: rgba(99, 102, 241, 0.3);">Course Completion</span>
+                <span class="cert-date">Core DSA</span>
+              </div>
+              <h4 class="cert-card-title">Data Structures in C++ (Completion)</h4>
+              <div class="cert-card-issuer">Coding Ninjas</div>
+              <div class="cert-meta-info">
+                <span>Verify ID: <code>9a9c15e31d87bc6c</code></span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/coding_ninjas_dsa_c_completion.png" 
+                        data-cert-title="Course Completion: Data Structures in C++" 
+                        data-cert-issuer="Coding Ninjas" 
+                        data-cert-verify="https://ninjasfiles.s3.amazonaws.com/certificate114259a9c15e31d87bc6c8ea2cf4b97779fdf.pdf">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="https://ninjasfiles.s3.amazonaws.com/certificate114259a9c15e31d87bc6c8ea2cf4b97779fdf.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Verify PDF ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Coding Ninjas - Intro to C (Excellence Award) -->
+          <article class="cert-card-visual" data-category="coding">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/coding_ninjas_intro_c_excellence.png" 
+                 data-cert-title="Certificate of Excellence: Introduction to C" 
+                 data-cert-issuer="Coding Ninjas (Excellence Award - Top Performer)" 
+                 data-cert-verify="https://ninjasfiles.s3.amazonaws.com/certificate114258a0a9f41053be958319bafe2b45053be.pdf">
+              <img class="cert-thumb-img" src="assets/certificates/coding_ninjas_intro_c_excellence.png" alt="Coding Ninjas Intro to C Excellence - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">Excellence Award &bull; Top Performer</span>
+                <span class="cert-date">C Language</span>
+              </div>
+              <h4 class="cert-card-title">Introduction to C (Excellence Award)</h4>
+              <div class="cert-card-issuer">Coding Ninjas</div>
+              <div class="cert-meta-info">
+                <span>Verify ID: <code>8a0a9f41053be958</code></span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/coding_ninjas_intro_c_excellence.png" 
+                        data-cert-title="Certificate of Excellence: Introduction to C" 
+                        data-cert-issuer="Coding Ninjas (Excellence Award)" 
+                        data-cert-verify="https://ninjasfiles.s3.amazonaws.com/certificate114258a0a9f41053be958319bafe2b45053be.pdf">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="https://ninjasfiles.s3.amazonaws.com/certificate114258a0a9f41053be958319bafe2b45053be.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Verify PDF ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Coding Ninjas - Intro to C (Completion) -->
+          <article class="cert-card-visual" data-category="coding">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/coding_ninjas_intro_c_completion.png" 
+                 data-cert-title="Certificate of Course Completion: Introduction to C" 
+                 data-cert-issuer="Coding Ninjas" 
+                 data-cert-verify="https://ninjasfiles.s3.amazonaws.com/certificate114258ddcac9de944e6396e949ff0aa2db5a3.pdf">
+              <img class="cert-thumb-img" src="assets/certificates/coding_ninjas_intro_c_completion.png" alt="Coding Ninjas Intro to C Completion - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border-color: rgba(99, 102, 241, 0.3);">Course Completion</span>
+                <span class="cert-date">Foundational</span>
+              </div>
+              <h4 class="cert-card-title">Introduction to C (Completion)</h4>
+              <div class="cert-card-issuer">Coding Ninjas</div>
+              <div class="cert-meta-info">
+                <span>Verify ID: <code>8ddcac9de944e639</code></span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/coding_ninjas_intro_c_completion.png" 
+                        data-cert-title="Course Completion: Introduction to C" 
+                        data-cert-issuer="Coding Ninjas" 
+                        data-cert-verify="https://ninjasfiles.s3.amazonaws.com/certificate114258ddcac9de944e6396e949ff0aa2db5a3.pdf">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="https://ninjasfiles.s3.amazonaws.com/certificate114258ddcac9de944e6396e949ff0aa2db5a3.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Verify PDF ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Udemy - OpenAI ChatGPT Course -->
+          <article class="cert-card-visual" data-category="ai-db">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/udemy_chatgpt_master.png" 
+                 data-cert-title="Mastering OpenAI Python APIs: ChatGPT & GPT-4" 
+                 data-cert-issuer="Udemy" 
+                 data-cert-verify="https://www.udemy.com/certificate/UC-e13ac4d4-dc98-4dfb-96f4-56d14cc33b6c/">
+              <img class="cert-thumb-img" src="assets/certificates/udemy_chatgpt_master.png" alt="Udemy ChatGPT Master - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Generative AI & LLMs</span>
+                <span class="cert-date">Udemy</span>
+              </div>
+              <h4 class="cert-card-title">Mastering OpenAI Python APIs: ChatGPT & GPT-4</h4>
+              <div class="cert-card-issuer">Udemy</div>
+              <div class="cert-meta-info">
+                <span>Cert: <code>UC-e13ac4d4-dc98-4dfb-96f4-56d14cc33b6c</code></span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/udemy_chatgpt_master.png" 
+                        data-cert-title="Mastering OpenAI Python APIs: ChatGPT & GPT-4" 
+                        data-cert-issuer="Udemy" 
+                        data-cert-verify="https://www.udemy.com/certificate/UC-e13ac4d4-dc98-4dfb-96f4-56d14cc33b6c/">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="https://www.udemy.com/certificate/UC-e13ac4d4-dc98-4dfb-96f4-56d14cc33b6c/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Verify Online ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Udemy - Introduction to DBMS -->
+          <article class="cert-card-visual" data-category="ai-db">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/udemy_intro_dbms.jpg" 
+                 data-cert-title="Introduction To DBMS (Database Management Systems)" 
+                 data-cert-issuer="Udemy" 
+                 data-cert-verify="https://www.udemy.com/certificate/UC-a51a2352-29da-4f44-8eed-2e8400b9a068/">
+              <img class="cert-thumb-img" src="assets/certificates/udemy_intro_dbms.jpg" alt="Udemy Intro to DBMS - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">Database Systems</span>
+                <span class="cert-date">Udemy</span>
+              </div>
+              <h4 class="cert-card-title">Introduction to DBMS</h4>
+              <div class="cert-card-issuer">Udemy</div>
+              <div class="cert-meta-info">
+                <span>Cert: <code>UC-a51a2352-29da-4f44-8eed-2e8400b9a068</code></span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/udemy_intro_dbms.jpg" 
+                        data-cert-title="Introduction To DBMS (Database Management Systems)" 
+                        data-cert-issuer="Udemy" 
+                        data-cert-verify="https://www.udemy.com/certificate/UC-a51a2352-29da-4f44-8eed-2e8400b9a068/">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="https://www.udemy.com/certificate/UC-a51a2352-29da-4f44-8eed-2e8400b9a068/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Verify Online ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Python Bootcamp - Code With Random -->
+          <article class="cert-card-visual" data-category="coding">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/python_bootcamp_codewithrandom.png" 
+                 data-cert-title="Python Full Stack BootCamp" 
+                 data-cert-issuer="Code With Random" 
+                 data-cert-verify="assets/certificates/python_bootcamp_codewithrandom.png">
+              <img class="cert-thumb-img" src="assets/certificates/python_bootcamp_codewithrandom.png" alt="Python Bootcamp - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Python Practical</span>
+                <span class="cert-date">BootCamp</span>
+              </div>
+              <h4 class="cert-card-title">Python Full Stack BootCamp</h4>
+              <div class="cert-card-issuer">Code With Random</div>
+              <div class="cert-meta-info">
+                <span>Verified Participant &bull; Dharmesh Kumar</span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/python_bootcamp_codewithrandom.png" 
+                        data-cert-title="Python Full Stack BootCamp" 
+                        data-cert-issuer="Code With Random" 
+                        data-cert-verify="assets/certificates/python_bootcamp_codewithrandom.png">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="assets/certificates/python_bootcamp_codewithrandom.png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Full Image ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. ATSS Technical Innovation & Ideation -->
+          <article class="cert-card-visual" data-category="analytics">
+            <div class="cert-thumb-wrapper" 
+                 data-cert-img="assets/certificates/atss_innovation_participation.jpg" 
+                 data-cert-title="Intercollegiate Technical Innovation & Ideation Conference" 
+                 data-cert-issuer="ATSS College of Business Studies & Computer Applications" 
+                 data-cert-verify="assets/certificates/atss_innovation_participation.jpg">
+              <img class="cert-thumb-img" src="assets/certificates/atss_innovation_participation.jpg" alt="ATSS Technical Innovation Conference - Dharmesh Kumar" loading="lazy">
+              <div class="cert-thumb-overlay">
+                <span class="cert-zoom-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  View Full Certificate
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <div class="cert-meta-top">
+                <span class="badge-tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">Conference & Ideation</span>
+                <span class="cert-date">National Level</span>
+              </div>
+              <h4 class="cert-card-title">Technical Innovation & Ideation</h4>
+              <div class="cert-card-issuer">ATSS CBSCA (Savitribai Phule Pune University)</div>
+              <div class="cert-meta-info">
+                <span>Verified Participant &bull; Dharmesh Kumar</span>
+              </div>
+              <div class="cert-card-actions">
+                <button class="btn btn-primary btn-sm" 
+                        data-cert-img="assets/certificates/atss_innovation_participation.jpg" 
+                        data-cert-title="Technical Innovation & Ideation Conference" 
+                        data-cert-issuer="ATSS College of Business Studies & Computer Applications" 
+                        data-cert-verify="assets/certificates/atss_innovation_participation.jpg">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  View Image
+                </button>
+                <a href="assets/certificates/atss_innovation_participation.jpg" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Full Image ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         EDUCATION & CREDENTIALS
          =================================================================== -->
     <section id="education" class="edu-cert-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-badge">Credentials</span>
-          <h2 class="section-title">Education & Certifications</h2>
+          <span class="section-badge">Academic Background</span>
+          <h2 class="section-title">Education & Qualifications</h2>
           <p class="section-subtitle">
-            Formal technical degrees in Data Science paired with globally recognized analytics certifications.
+            Formal technical degrees in Data Science paired with continuous professional specialization.
           </p>
         </div>
 
@@ -1198,14 +1829,14 @@
             </div>
           </div>
 
-          <!-- Right Column: Certifications (All 8) -->
+          <!-- Right Column: Certifications Summary (All 11) -->
           <div class="cert-column">
             <h3 class="column-heading">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
                 <circle cx="12" cy="8" r="7"></circle>
                 <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
               </svg>
-              <span>Certificates (8 Verified)</span>
+              <span>Verified Certificates (11 Credentials)</span>
             </h3>
 
             <!-- 1. IABAC -->
@@ -1217,7 +1848,16 @@
               </div>
             </div>
 
-            <!-- 2. DATAMITES -->
+            <!-- 2. NASSCOM -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">📜</div>
+              <div>
+                <h4 class="cert-name">Certified Data Scientist (Gold - 97%)</h4>
+                <div class="cert-issuer">NASSCOM (FutureSkills Prime) & Govt. of India</div>
+              </div>
+            </div>
+
+            <!-- 3. DATAMITES -->
             <div class="cert-card">
               <div class="cert-badge-icon">🎖️</div>
               <div>
@@ -1226,25 +1866,34 @@
               </div>
             </div>
 
-            <!-- 3. NASSCOM -->
+            <!-- 4. Coding Ninjas DSA Excellence -->
             <div class="cert-card">
-              <div class="cert-badge-icon">📜</div>
+              <div class="cert-badge-icon">🏆</div>
               <div>
-                <h4 class="cert-name">Certified Data Scientist</h4>
-                <div class="cert-issuer">NASSCOM (FutureSkills Prime)</div>
+                <h4 class="cert-name">Data Structures in C++ (Excellence Award)</h4>
+                <div class="cert-issuer">Coding Ninjas &bull; 90%+ Top Performer</div>
               </div>
             </div>
 
-            <!-- 4. OpenAI ChatGPT Course -->
+            <!-- 5. Coding Ninjas Intro to C Excellence -->
+            <div class="cert-card">
+              <div class="cert-badge-icon">⭐</div>
+              <div>
+                <h4 class="cert-name">Introduction to C (Excellence Award)</h4>
+                <div class="cert-issuer">Coding Ninjas &bull; Top Performer</div>
+              </div>
+            </div>
+
+            <!-- 6. OpenAI ChatGPT Course -->
             <div class="cert-card">
               <div class="cert-badge-icon">🤖</div>
               <div>
-                <h4 class="cert-name">OpenAI ChatGPT Course</h4>
+                <h4 class="cert-name">Mastering OpenAI Python APIs: ChatGPT & GPT-4</h4>
                 <div class="cert-issuer">Udemy</div>
               </div>
             </div>
 
-            <!-- 5. Intro to DBMS -->
+            <!-- 7. Intro to DBMS -->
             <div class="cert-card">
               <div class="cert-badge-icon">🗄️</div>
               <div>
@@ -1253,34 +1902,25 @@
               </div>
             </div>
 
-            <!-- 6. DBMS Uncovered -->
+            <!-- 8. Python Bootcamp -->
             <div class="cert-card">
-              <div class="cert-badge-icon">⚡</div>
+              <div class="cert-badge-icon">🐍</div>
               <div>
-                <h4 class="cert-name">DBMS Uncovered</h4>
-                <div class="cert-issuer">Udemy</div>
+                <h4 class="cert-name">Python Full Stack BootCamp</h4>
+                <div class="cert-issuer">Code With Random</div>
               </div>
             </div>
 
-            <!-- 7. Data Structure in C++ -->
-            <div class="cert-card">
-              <div class="cert-badge-icon">💻</div>
-              <div>
-                <h4 class="cert-name">Data Structure in C++</h4>
-                <div class="cert-issuer">Coding Ninjas</div>
-              </div>
+            <div style="margin-top: 1.25rem;">
+              <a href="#certificates" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                View All 11 High-Res Certificate Images ↗
+              </a>
             </div>
-
-            <!-- 8. Intro to C -->
-            <div class="cert-card">
-              <div class="cert-badge-icon">🧩</div>
-              <div>
-                <h4 class="cert-name">Introduction to C</h4>
-                <div class="cert-issuer">Coding Ninjas</div>
-              </div>
-            </div>
-
-          </div>
 
         </div>
       </div>
@@ -1473,6 +2113,45 @@
   </div>
 
   <!-- ===================================================================
+       CERTIFICATE LIGHTBOX MODAL (FULL IMAGE PREVIEW & VERIFICATION)
+       =================================================================== -->
+  <div id="cert-lightbox" class="cert-lightbox-overlay" role="dialog" aria-modal="true" aria-labelledby="cert-lightbox-title">
+    <div class="cert-lightbox-modal">
+      <div class="cert-lightbox-header">
+        <div>
+          <h3 id="cert-lightbox-title" class="cert-lightbox-title">Certificate Preview</h3>
+          <p id="cert-lightbox-subtitle" class="cert-lightbox-subtitle">Verified Technical Credential &bull; Dharmesh Kumar</p>
+        </div>
+        <div class="cert-lightbox-actions">
+          <a id="cert-open-newtab" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="Open full resolution in new tab">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Open Original
+          </a>
+          <a id="cert-verify-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" title="Verify online with issuing authority">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Verify Online
+          </a>
+          <button id="cert-lightbox-close" class="modal-close-btn" aria-label="Close certificate lightbox">&times;</button>
+        </div>
+      </div>
+      <div class="cert-lightbox-body">
+        <img id="cert-lightbox-img" class="cert-lightbox-img" src="" alt="Dharmesh Kumar Certificate Full View">
+      </div>
+      <div class="cert-lightbox-footer">
+        <span>Recipient: <strong>Dharmesh Kumar</strong> &bull; Verified Technical Achievement</span>
+        <span>Press <kbd style="background:var(--bg-secondary); padding:2px 6px; border-radius:4px; border:1px solid var(--border-color); font-family:var(--font-mono); font-size:0.75rem;">ESC</kbd> or click backdrop to close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
        RESUME VIEWER & PRINTABLE MODAL
        =================================================================== -->
   <div id="resume-modal" class="modal-overlay" role="dialog" aria-modal="true">
@@ -1590,7 +2269,27 @@
 
           <!-- Projects -->
           <div class="res-sec-title">PROJECTS</div>
-          
+
+          <div class="res-role-head">
+            <span>ShopFlow Analytics – E-Commerce Modern Data Platform | <a href="https://shopflow-analytics-nh2a9ucu75xyequqmv94cc.streamlit.app/" target="_blank" style="color:#10b981; font-weight:700;">🚀 Live App</a> | <a href="https://github.com/Dharmeshkumar2327/shopflow-analytics" target="_blank" style="color:#2563eb;">GitHub</a></span>
+            <span class="res-role-date">2026 • Production</span>
+          </div>
+          <ul>
+            <li>Engineered an end-to-end modern data stack on dbt Core + DuckDB with 28 modular dimensional models across Staging, Intermediate, and Mart layers (Finance, Marketing, Operations).</li>
+            <li>Built 140+ automated data tests, freshness checks, and GitHub Actions CI/CD pipeline powering a live Streamlit dashboard with RFM segmentation, CAC/LTV payback, and cohort retention.</li>
+          </ul>
+          <p style="font-size:0.82rem; color:#4b5563; padding-left:1.25rem;"><strong>Tools:</strong> dbt Core, DuckDB, Python, Streamlit Live, SQL / PostgreSQL, GitHub Actions CI/CD</p>
+
+          <div class="res-role-head">
+            <span>SkillGraph India – Job Market Intelligence Engine | <a href="https://github.com/Dharmeshkumar2327/skillgraph-india" target="_blank" style="color:#2563eb;">GitHub</a></span>
+            <span class="res-role-date">2026 • Big Data</span>
+          </div>
+          <ul>
+            <li>Analyzed 60,000+ Indian job postings using Python, PostgreSQL, Power BI, and FP-Growth itemset mining to discover in-demand skill associations and salary premiums (+10.5% for GenAI).</li>
+            <li>Constructed Louvain community clusters and Dijkstra-based career pathways boosting Data Analyst to Data Scientist transition readiness.</li>
+          </ul>
+          <p style="font-size:0.82rem; color:#4b5563; padding-left:1.25rem;"><strong>Tools:</strong> Python (Pandas, Scikit-learn, Statsmodels), PostgreSQL, Power BI, Network Graphs</p>
+
           <div class="res-role-head">
             <span>Customer Churn Prediction with Deep Learning | Quad AI | <a href="https://github.com/Dharmeshkumar2327/Deep_Learning_Customer_Churn_Intelligence" target="_blank" style="color:#2563eb;">GitHub</a></span>
             <span class="res-role-date">Sep 2026 – Oct 2026</span>
@@ -1690,10 +2389,11 @@
           </table>
 
           <!-- Certifications -->
-          <div class="res-sec-title">CERTIFICATIONS</div>
-          <p>• <strong>Certified Data Analyst</strong> – IABAC &bull; <strong>Certified Data Analyst</strong> – DATAMITES &bull; <strong>Certified Data Scientist</strong> – NASSCOM</p>
-          <p>• <strong>Introduction to DBMS; DBMS Uncovered; OpenAI ChatGPT Course</strong> – Udemy</p>
-          <p>• <strong>Data Structures in C++; Introduction to C</strong> – Coding Ninjas</p>
+          <div class="res-sec-title">CERTIFICATIONS (11 VERIFIED CREDENTIALS)</div>
+          <p>• <strong>Certified Data Analyst</strong> – IABAC &bull; <strong>Certified Data Scientist (Gold - 97%)</strong> – NASSCOM FutureSkills Prime &bull; <strong>Certified Data Analyst</strong> – DataMites</p>
+          <p>• <strong>Data Structures in C++ (Excellence Award)</strong> &bull; <strong>Introduction to C (Excellence Award)</strong> – Coding Ninjas</p>
+          <p>• <strong>Mastering OpenAI Python APIs (ChatGPT & GPT-4)</strong> &bull; <strong>Introduction to DBMS</strong> – Udemy</p>
+          <p>• <strong>Python Full Stack BootCamp</strong> – Code With Random &bull; <strong>Technical Innovation & Ideation</strong> – ATSS CBSCA</p>
 
           <!-- Soft Skills -->
           <div class="res-sec-title">SOFT SKILLS</div>

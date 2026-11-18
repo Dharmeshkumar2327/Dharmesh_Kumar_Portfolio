@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectModals();
   initResumeModal();
   initContactActions();
+  initCertificateLightbox();
+  initCertificateFiltering();
 });
 
 /* ===================================================================
@@ -626,6 +628,88 @@ function initCodeTerminal() {
    8. PROJECT DEEP-DIVE MODALS
    =================================================================== */
 const PROJECT_MODAL_DETAILS = {
+  'shopflow-analytics': {
+    title: 'ShopFlow Analytics — Modern Analytics Engineering Platform',
+    subtitle: 'dbt Core • DuckDB • Streamlit Live • GitHub Actions CI/CD',
+    liveUrl: 'https://shopflow-analytics-nh2a9ucu75xyequqmv94cc.streamlit.app/',
+    githubUrl: 'https://github.com/Dharmeshkumar2327/shopflow-analytics',
+    tags: ['dbt Core', 'DuckDB', 'Python', 'Streamlit Live', 'SQL', 'CI/CD'],
+    problem: 'Fast-growing Indian e-commerce marketplace needed a scalable analytics engineering architecture to transform messy raw operational data into audited, tested data marts answering critical executive questions on festive season uplift, CAC/LTV, cohort retention, and seller performance.',
+    approach: [
+      'Built a full modern data stack on dbt Core + DuckDB with 28 modular models organized into Staging, Intermediate, and Mart layers (Finance, Marketing, Operations).',
+      'Implemented 140+ rigorous automated data tests, freshness checks, and continuous integration (CI) workflows via GitHub Actions.',
+      'Developed advanced SQL analytical models: 8 RFM customer segments, 180-day CAC vs LTV payback tracking, monthly cohort retention curves, and seller delivery scorecards.',
+      'Constructed and deployed a live interactive Streamlit web dashboard providing real-time executive drill-downs with zero cloud database costs.'
+    ],
+    impact: 'Live application active with zero-cloud-cost DuckDB warehouse. Replaced ad-hoc manual spreadsheets with an automated, reproducible data engineering pipeline processing multi-year marketplace operations in under 2 minutes.',
+    codeSnippet: `-- dbt Mart: Monthly Customer Cohort Retention & Cumulative LTV
+WITH cohort_sizes AS (
+    SELECT 
+        cohort_month,
+        COUNT(DISTINCT customer_id) AS total_customers
+    FROM {{ ref('int_customer_first_orders') }}
+    GROUP BY 1
+),
+cohort_activity AS (
+    SELECT 
+        c.cohort_month,
+        DATEDIFF('month', c.cohort_month, o.order_month) AS period_number,
+        COUNT(DISTINCT o.customer_id) AS active_customers,
+        SUM(o.net_sales) AS period_revenue
+    FROM {{ ref('int_customer_first_orders') }} c
+    JOIN {{ ref('fct_orders') }} o ON c.customer_id = o.customer_id
+    GROUP BY 1, 2
+)
+SELECT 
+    ca.cohort_month,
+    ca.period_number,
+    ca.active_customers,
+    ROUND(ca.active_customers::DOUBLE / cs.total_customers * 100, 2) AS retention_rate_pct,
+    ROUND(SUM(ca.period_revenue) OVER (
+        PARTITION BY ca.cohort_month ORDER BY ca.period_number
+    ) / cs.total_customers, 2) AS cumulative_ltv_per_customer
+FROM cohort_activity ca
+JOIN cohort_sizes cs ON ca.cohort_month = cs.cohort_month
+ORDER BY ca.cohort_month, ca.period_number;`
+  },
+  'skillgraph-india': {
+    title: 'SkillGraph India — Data & AI Job Market Intelligence Engine',
+    subtitle: '60,000 Job Postings • Python • FP-Growth • Graph Mining • Power BI',
+    githubUrl: 'https://github.com/Dharmeshkumar2327/skillgraph-india',
+    tags: ['Python', 'SQL', 'Power BI', 'FP-Growth', 'Louvain Community', 'Streamlit'],
+    problem: 'Data & AI job seekers and hiring teams lacked empirical, quantitative clarity on emerging tech skills, real salary premiums, and realistic transition pathways from Data Analyst to Data Scientist roles in the Indian market.',
+    approach: [
+      'Engineered an end-to-end intelligence engine mining 60,000 Indian tech postings across 72 technical skills with 200+ regex aliases, Damerau-Levenshtein typo correction, and contextual disambiguation (99.7% F1 score).',
+      'Implemented FP-Growth frequent itemset mining from scratch, extracting 907 non-redundant skill co-occurrence rules.',
+      'Constructed a network graph with Louvain community detection discovering 5 distinct tech clusters (Modularity 0.44), PageRank centrality, and temporal link prediction (ROC-AUC 0.94).',
+      'Modeled log-salary median quantile regressions revealing adjusted market premiums (+10.5% for LLMs/GenAI, +8.2% for Databricks) and built a Dijkstra-based career transition recommender.',
+      'Delivered insights through a multi-page Power BI dashboard, a FastAPI REST service, and a Streamlit web application.'
+    ],
+    impact: 'Discovered the +10.5% GenAI salary premium and mapped optimal career pathways elevating Data Analyst to Data Scientist readiness from 18% to 60% with 6 targeted high-leverage skills.',
+    codeSnippet: `# SkillGraph: Quantile Log-Salary Premium Estimation
+import statsmodels.formula.api as smf
+import numpy as np
+
+def estimate_skill_premiums(df, target_skills):
+    """Controls for role, seniority, city tier, and posting month."""
+    premiums = {}
+    formula = "log_salary ~ " + " + ".join(target_skills) + " + C(role) + C(seniority) + C(city) + C(month)"
+    
+    # 50th percentile (Median) quantile regression
+    mod = smf.quantreg(formula, data=df)
+    res = mod.fit(q=0.5)
+    
+    for skill in target_skills:
+        coef = res.params.get(skill, 0.0)
+        # Convert log-points to percentage premium: exp(beta) - 1
+        pct_premium = (np.exp(coef) - 1.0) * 100.0
+        premiums[skill] = {
+            'premium_pct': round(pct_premium, 2),
+            'p_value': round(res.pvalues.get(skill, 1.0), 4),
+            'conf_int': (np.exp(res.conf_int().loc[skill]) - 1.0) * 100.0
+        }
+    return premiums`
+  },
   'purchase-pattern': {
     title: 'Purchase Pattern Analytics | Quad AI',
     subtitle: 'Dec 2025 – Feb 2026 • Bangalore, India',
@@ -926,6 +1010,12 @@ function openProjectModal(projKey) {
 
   const tagsHtml = details.tags.map(t => `<span class="badge-tag">${t}</span>`).join(' ');
   const approachHtml = details.approach.map(a => `<li>${a}</li>`).join('');
+  const actionsHtml = (details.liveUrl || details.githubUrl) ? `
+    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-color);">
+      ${details.liveUrl ? `<a href="${details.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-live btn-sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> Open Live Streamlit App</a>` : ''}
+      ${details.githubUrl ? `<a href="${details.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">View on GitHub ↗</a>` : ''}
+    </div>
+  ` : '';
 
   contentEl.innerHTML = `
     <div style="margin-bottom: 1.5rem;">
@@ -955,6 +1045,8 @@ function openProjectModal(projKey) {
       <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Production Query / Code Blueprint</h4>
       <pre style="background: #0d1117; color: #e6edf3; padding: 1rem; border-radius: 8px; font-family: var(--font-mono); font-size: 0.8rem; overflow-x: auto; border: 1px solid rgba(255,255,255,0.1);"><code>${escapeHtml(details.codeSnippet)}</code></pre>
     </div>
+
+    ${actionsHtml}
   `;
 
   modalOverlay.classList.add('active');
@@ -1064,4 +1156,100 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove('show');
   }, 3500);
+}
+
+
+/* ===================================================================
+   11. CERTIFICATE LIGHTBOX & FILTERING
+   =================================================================== */
+function initCertificateLightbox() {
+  const lightboxOverlay = document.getElementById('cert-lightbox');
+  const closeBtn = document.getElementById('cert-lightbox-close');
+  const modalImg = document.getElementById('cert-lightbox-img');
+  const modalTitle = document.getElementById('cert-lightbox-title');
+  const modalSubtitle = document.getElementById('cert-lightbox-subtitle');
+  const openNewTabBtn = document.getElementById('cert-open-newtab');
+  const verifyLink = document.getElementById('cert-verify-link');
+
+  const certTriggers = document.querySelectorAll('[data-cert-img]');
+
+  certTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const imgSrc = trigger.dataset.certImg;
+      const title = trigger.dataset.certTitle || 'Certificate of Achievement';
+      const issuer = trigger.dataset.certIssuer || 'Verified Credential';
+      const verifyUrl = trigger.dataset.certVerify || '';
+
+      if (modalImg) modalImg.src = imgSrc;
+      if (modalTitle) modalTitle.innerText = title;
+      if (modalSubtitle) modalSubtitle.innerText = issuer;
+      if (openNewTabBtn) openNewTabBtn.href = imgSrc;
+
+      if (verifyLink) {
+        if (verifyUrl && verifyUrl !== '#' && verifyUrl.startsWith('http')) {
+          verifyLink.href = verifyUrl;
+          verifyLink.style.display = 'inline-flex';
+        } else {
+          verifyLink.style.display = 'none';
+        }
+      }
+
+      if (lightboxOverlay) {
+        lightboxOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeLightbox() {
+    if (lightboxOverlay) {
+      lightboxOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  if (lightboxOverlay) {
+    lightboxOverlay.addEventListener('click', (e) => {
+      if (e.target === lightboxOverlay) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxOverlay && lightboxOverlay.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+}
+
+function initCertificateFiltering() {
+  const filterBtns = document.querySelectorAll('.cert-filter-btn');
+  const certCards = document.querySelectorAll('.cert-card-visual');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.certFilter;
+
+      certCards.forEach(card => {
+        const categories = card.dataset.category || '';
+        if (filter === 'all' || categories.includes(filter)) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 20);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(15px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 200);
+        }
+      });
+    });
+  });
 }
